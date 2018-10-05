@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body bgcolor="#E6E6FA">
+    <header>
+      <img src="http://www.webzeen.fr/wp-content/uploads/2016/03/Banni%C3%A8re-Jeux-vid%C3%A9os.png" class="center">
+    </header>
+    <form name="recherche" action="rechercher.php" method="GET">
+      <!-- Barre de recherche -->
+      <input type="text"
+             name="rechercheTitre"
+             placeholder="Entrez le nom d'un jeu"
+             autocomplete="off"
+             required pattern="([a-zA-Z\d]+)([a-zA-Z\d ]{1,})">
+      <!-- Liste des éditeurs -->
+
+      <!-- Envoie de la recherche -->
+      <input type="submit"
+             name="btrecherche"
+             value="">
+    </form>
+  </body>
+</html>
