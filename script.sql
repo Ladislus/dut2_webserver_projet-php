@@ -10,15 +10,15 @@ DROP TABLE IF EXISTS JEU;
 
 
 CREATE TABLE JEU (
-  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  NOM VARCHAR(100) DEFAULT NULL,
+  IDJ INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  NOMJ VARCHAR(100) DEFAULT NULL,
   DATESORTIE DATE DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE EDITEUR (
-  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  NOM VARCHAR(100) DEFAULT NULL,
+  IDE INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  NOME VARCHAR(100) DEFAULT NULL,
   SIEGESOCIETE VARCHAR(100) DEFAULT NULL,
   DATECREATION DATE DEFAULT NULL,
   ETAT VARCHAR(100) DEFAULT NULL
@@ -26,44 +26,59 @@ CREATE TABLE EDITEUR (
 
 
 CREATE TABLE ESTEDITER (
-  IDJEU INT,
-  idEditeur INT,
-  CONSTRAINT pk_estediter PRIMARY KEY (IDJEU, idEditeur),
-  CONSTRAINT fk_estediter_jeu FOREIGN KEY (IDJEU) REFERENCES JEU(ID) ON DELETE CASCADE,
-  CONSTRAINT fk_estediter_editeur FOREIGN KEY (idEditeur) REFERENCES EDITEUR(ID) ON DELETE CASCADE
+  IDJ INT,
+  IDE INT,
+  CONSTRAINT pk_estediter PRIMARY KEY (IDJ, IDE),
+  CONSTRAINT fk_estediter_jeu FOREIGN KEY (IDJ) REFERENCES JEU(IDJ) ON DELETE CASCADE,
+  CONSTRAINT fk_estediter_editeur FOREIGN KEY (IDE) REFERENCES EDITEUR(IDE) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE GENRE (
-  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  IDG INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   NOMGENRE VARCHAR(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE ESTDUGENRE (
-  IDJEU INT,
-  IDGENRE INT,
-  CONSTRAINT pk_estdugenre PRIMARY KEY (IDJEU, IDGENRE),
-  CONSTRAINT fk_estdugenre_jeu FOREIGN KEY (IDJEU) REFERENCES JEU(ID) ON DELETE CASCADE,
-  CONSTRAINT fk_estdugenre_genre FOREIGN KEY (IDGENRE) REFERENCES GENRE(ID) ON DELETE CASCADE
+  IDJ INT,
+  IDG INT,
+  CONSTRAINT pk_estdugenre PRIMARY KEY (IDJ, IDG),
+  CONSTRAINT fk_estdugenre_jeu FOREIGN KEY (IDJ) REFERENCES JEU(IDJ) ON DELETE CASCADE,
+  CONSTRAINT fk_estdugenre_genre FOREIGN KEY (IDG) REFERENCES GENRE(IDG) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE THEME (
-  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  IDT INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   NOMTHEME VARCHAR(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE ESTDUTHEME (
-  IDJEU INT,
-  IDTHEME INT,
-  CONSTRAINT pk_estdutheme PRIMARY KEY (IDJEU, IDTHEME),
-  CONSTRAINT fk_estdutheme_jeu FOREIGN KEY (IDJEU) REFERENCES JEU(ID) ON DELETE CASCADE,
-  CONSTRAINT fk_estdutheme_theme FOREIGN KEY (IDTHEME) REFERENCES THEME(ID) ON DELETE CASCADE
+  IDJ INT,
+  IDT INT,
+  CONSTRAINT pk_estdutheme PRIMARY KEY (IDJ, IDT),
+  CONSTRAINT fk_estdutheme_jeu FOREIGN KEY (IDJ) REFERENCES JEU(IDJ) ON DELETE CASCADE,
+  CONSTRAINT fk_estdutheme_theme FOREIGN KEY (IDT) REFERENCES THEME(IDT) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO JEU     (NOM, DATESORTIE)                         VALUES ('The Legend of Zelda : Ocarina of Time', '1998-11-21');
-INSERT INTO EDITEUR (NOM, SIEGESOCIETE, DATECREATION, ETAT)   VALUES ('NINTendo', 'Japon', '1883-09-23', 'OUVERT');
-INSERT INTO GENRE   (NOMGENRE)                                VALUES ('RPG');
-INSERT INTO THEME   (NOMTHEME)                                VALUES ('Fantasy');
+INSERT INTO JEU     (NOMJ, DATESORTIE)                        VALUES ('The Legend of Zelda : Ocarina of Time', '1998-11-21'),
+                                                                     ('Minecraft', '20011-11-18'),
+                                                                     ('Jean-Paul II the Ultimate Game', '2019-05-05');
+INSERT INTO EDITEUR (NOME, SIEGESOCIETE, DATECREATION, ETAT)  VALUES ('Nintendo', 'Japon', '1883-09-23', 'OUVERT'),
+                                                                     ('Mojang', 'Finland', '2007-10-04', 'OUVERT'),
+                                                                     ('SuperSWAG&Co', 'Vatican', '2000-02-02', 'FERME');
+INSERT INTO GENRE   (NOMGENRE)                                VALUES ('RPG'),
+                                                                     ('MMORPG'),
+                                                                     ('Multijoueur'),
+                                                                     ('Simulation'),
+                                                                     ('Survie'),
+                                                                     ('Stratégie'),
+                                                                     ('Gestion');
+INSERT INTO THEME   (NOMTHEME)                                VALUES ('Fantasy'),
+                                                                     ('Science-Fiction'),
+                                                                     ('Post-Apocalyptic');
+INSERT INTO ESTEDITER (IDJ, IDE)                              VALUES (1,1),
+                                                                     (2,2),
+                                                                     (3,3);
