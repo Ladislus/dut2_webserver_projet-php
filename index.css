@@ -1,9 +1,6 @@
-input[type=submit] {
-    border: medium none !important;
-    background: url(http://icons.iconarchive.com/icons/pit-tux/crystal-bw/256/loupe-icon.png);
-    background-size: cover;
-    height: 25px;
-    width: 25px;
+input[type=text] {
+    height: 5%;
+    width: 25%;
 }
 .center {
   display: block;
@@ -12,3 +9,21 @@ input[type=submit] {
   margin-top: auto;
   margin-bottom: auto;
   width: 100%; }
+body {
+  background-color: #d3d3d3;
+}
+
+#resultat {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #cccccc;
+}
+
+#lien {
+  color: #383534;
+  text-decoration: none;
+}
+
+header img{
+  padding-bottom: 1%;
+}

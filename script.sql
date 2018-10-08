@@ -10,14 +10,14 @@ DROP TABLE IF EXISTS JEU;
 
 
 CREATE TABLE JEU (
-  IDJ INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  IDJ INT AUTO_INCREMENT PRIMARY KEY,
   NOMJ VARCHAR(100) DEFAULT NULL,
   DATESORTIE DATE DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE EDITEUR (
-  IDE INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  IDE INT AUTO_INCREMENT PRIMARY KEY,
   NOME VARCHAR(100) DEFAULT NULL,
   SIEGESOCIETE VARCHAR(100) DEFAULT NULL,
   DATECREATION DATE DEFAULT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE ESTEDITER (
 
 
 CREATE TABLE GENRE (
-  IDG INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  IDG INT AUTO_INCREMENT PRIMARY KEY,
   NOMGENRE VARCHAR(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -50,7 +50,7 @@ CREATE TABLE ESTDUGENRE (
 
 
 CREATE TABLE THEME (
-  IDT INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  IDT INT AUTO_INCREMENT PRIMARY KEY,
   NOMTHEME VARCHAR(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -64,7 +64,7 @@ CREATE TABLE ESTDUTHEME (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO JEU     (NOMJ, DATESORTIE)                        VALUES ('The Legend of Zelda : Ocarina of Time', '1998-11-21'),
-                                                                     ('Minecraft', '20011-11-18'),
+                                                                     ('Minecraft', '2011-11-18'),
                                                                      ('Jean-Paul II the Ultimate Game', '2019-05-05');
 INSERT INTO EDITEUR (NOME, SIEGESOCIETE, DATECREATION, ETAT)  VALUES ('Nintendo', 'Japon', '1883-09-23', 'OUVERT'),
                                                                      ('Mojang', 'Finland', '2007-10-04', 'OUVERT'),
@@ -81,4 +81,10 @@ INSERT INTO THEME   (NOMTHEME)                                VALUES ('Fantasy')
                                                                      ('Post-Apocalyptic');
 INSERT INTO ESTEDITER (IDJ, IDE)                              VALUES (1,1),
                                                                      (2,2),
+                                                                     (3,3);
+INSERT INTO ESTDUGENRE (IDJ, IDG)                             VALUES (1,1), (1,7),
+                                                                     (2,1), (2,3), (2,4), (2,5), (2,7),
+                                                                     (3,1), (3,2), (3,3), (3,5);
+INSERT INTO ESTDUTHEME (IDJ, IDT)                             VALUES (1,1), (1,2),
+                                                                     (2,3),
                                                                      (3,3);
