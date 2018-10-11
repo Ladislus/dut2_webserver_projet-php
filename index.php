@@ -16,7 +16,7 @@
 
     <!-- Bannière -->
     <header>
-      <img height="25%" src="https://www.soccerbbc.com/wp-content/uploads/2017/04/how-to-get-a-job-as-a-video-game-tester-volt-blog-throughout-video-game-banner.jpg" class="center">
+      <img src="https://www.soccerbbc.com/wp-content/uploads/2017/04/how-to-get-a-job-as-a-video-game-tester-volt-blog-throughout-video-game-banner.jpg" class="center">
     </header>
 
     <!-- Liens -->

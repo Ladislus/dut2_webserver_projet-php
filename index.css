@@ -21,6 +21,16 @@ body {
   background-color: #c65e17;
 }
 
+header{
+  text-align: center;
+  background-color: #11699b;
+}
+
+img{
+  height: 50%;
+  width: 50%;
+}
+
 #resultat {
   margin-left: 20%;
   margin-right: 20%;

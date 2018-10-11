@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <img src="https://www.soccerbbc.com/wp-content/uploads/2017/04/how-to-get-a-job-as-a-video-game-tester-volt-blog-throughout-video-game-banner.jpg" class="center">
+      <a href="index.php"><img src="https://www.soccerbbc.com/wp-content/uploads/2017/04/how-to-get-a-job-as-a-video-game-tester-volt-blog-throughout-video-game-banner.jpg" class="center"></a>
     </header>
     </article>
     <?php
@@ -26,7 +26,6 @@
     if(!$connexion->query($sql)) echo "Pb d'accès à la liste";
     else{
       ?>
-      <dl>
         <?php
         foreach ($connexion->query($sql) as $row)
         echo "<h1>".$row['NOME']."</h1>";
@@ -35,9 +34,8 @@
         echo "".$row['DESCE']."<p>";
         echo "<h3>Voici la liste des jeux que ".$row['NOME']." à sorti jusqu'à ce jour</h3>";
         echo "<ul><li>".$row['NOMJ']."\n<br></li>";
-        echo "</ul>";
       ?>
-      </dl>
+      </ul>
     <?php } ?>
   </body>
 </html>
