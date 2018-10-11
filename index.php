@@ -26,13 +26,13 @@
            autocomplete="off"
            onkeyup="reloadTitre()" >
 
-
   <br><a id="lien" href="listeEditeur.php">Accéder à la liste des éditeurs</a>
   <br><a id="lien" href="listeJeu.php">Accéder à la liste des jeux</a>
   <br><a id="lien" href="listeTheme.php">Accéder à la liste des thèmes</a>
-  <br><a id="lien" href="listeGenre.php">Accéder à la liste des genres</a>
+  <br><a id="lien" href="listeGenre.php">Accéder à la liste des genre</a>
 
-    <div id="resultat">
-    </div>
+  <div id="resultat">
+  </div>
+
   </body>
 </html>

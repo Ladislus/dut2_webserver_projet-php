@@ -23,7 +23,7 @@
       echo "<h1> JEUX </h1>";
     # Affichage des jeux
     foreach ($connexion->query($sql) as $row) {
-      echo "<a href='template/jeu.php?name=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n"; }}}
+      echo "<a href='template/jeu.php?id=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n"; }}}
 
 ###########################################################################
 
@@ -37,7 +37,7 @@
         echo "<h1> EDITEUR </h1>";
     # Affichage des éditeurs
     foreach ($connexion->query($sql) as $row) {
-      echo "<a href='template/editeur.php?name=".urlencode($row['IDE'])."'>".$row['NOME']."</a><br/>\n"; }}}
+      echo "<a href='template/editeur.php?id=".urlencode($row['IDE'])."'>".$row['NOME']."</a><br/>\n"; }}}
 
 ###########################################################################
 
@@ -51,7 +51,7 @@
         echo "<h1> GENRE </h1>";
     # Affichage des genres
     foreach ($connexion->query($sql) as $row) {
-      echo "<a href='template/genre.php?name=".urlencode($row['IDG'])."'>".$row['NOMGENRE']."</a><br/>\n"; }}}
+      echo "<a href='template/genre.php?id=".urlencode($row['IDG'])."'>".$row['NOMGENRE']."</a><br/>\n"; }}}
 
 ###########################################################################
 
@@ -65,5 +65,6 @@
         echo "<h1> THEME </h1>";
     # Affichage des jeux
     foreach ($connexion->query($sql) as $row) {
-      echo "<a href='template/theme.php?name=".urlencode($row['IDT'])."'>".$row['NOMTHEME']."</a><br/>\n"; }}}
+      echo "<a href='template/theme.php?id=".urlencode($row['IDT'])."'>".$row['NOMTHEME']."</a><br/>\n"; }}}
+      
 ?>
