@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Page d'accueil</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="shortcut icon" type="image/png" href="https://vignette.wikia.nocookie.net/nintendo/images/0/08/Kirby_Portal_Icon.png/revision/latest?cb=20120502060006&path-prefix=en" />
+    <link rel="shortcut icon" type="image/png" href="image/vignette.png" />
 
     <script src="jquery.js"></script>
     <script>
@@ -16,7 +16,7 @@
 
     <!-- Bannière -->
     <header>
-      <img src="https://www.soccerbbc.com/wp-content/uploads/2017/04/how-to-get-a-job-as-a-video-game-tester-volt-blog-throughout-video-game-banner.jpg" class="center">
+      <img src="image/banniere.jpg">
     </header>
 
     <!-- Liens -->
@@ -34,8 +34,6 @@
             placeholder="Entrez le nom d'un jeu"
             autocomplete="off"
             onkeyup="reloadTitre()" >
-
-      <br><a href="pageNintendo.php"> PAGE NINTENDO</a>
 
       <div id="resultat">
       </div>

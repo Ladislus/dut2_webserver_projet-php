@@ -31,11 +31,19 @@
         echo "<h1>".$row['NOME']."</h1>";
         echo "<article><p>";
         echo "<h3>Léger résumé de l'entreprise</h3>";
+        echo "Crée le ".$row['DATECREATION']."<br>";
         echo "".$row['DESCE']."<p>";
         echo "<h3>Voici la liste des jeux que ".$row['NOME']." à sorti jusqu'à ce jour</h3>";
         echo "<ul><li>".$row['NOMJ']."\n<br></li>";
+        echo "</ul>";
+        if ($row['ETAT']=='OUVERT'){
+          echo $row['NOME']." est toujours ouvert à ce jour !";
+        }
+        else{
+          echo $row['NOME']." a, hélas mis là clé sous la porte !";
+        }
       ?>
-      </ul>
+
     <?php } ?>
   </body>
 </html>

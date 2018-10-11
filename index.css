@@ -1,6 +1,6 @@
 input[type=text] {
     width: 25%;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     margin-top: 3%;
     margin-left: 3%;
     margin-right: 3%;
@@ -24,27 +24,32 @@ body {
 header{
   text-align: center;
   background-color: #11699b;
+  width: 100%;
 }
 
 img{
-  height: 50%;
-  width: 50%;
+  height: 10vw;
+  width: auto;
 }
 
 #resultat {
   margin-left: 20%;
   margin-right: 20%;
-  background-color: #cccccc;
+  margin-top: 5%;
+  padding: 1vw;
+  background-color: #11889a;
+  border-color: #000000;
+  border-style: solid;
 }
 
 #lien {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 1.75vw;
   text-align: center;
-  padding-right: 5px;
-  padding-left: 5px;
-  margin: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 2px;
   background-color: #f7914c;
   opacity: 0.75;
   border-radius: 3px;
@@ -61,7 +66,7 @@ img{
   overflow: hidden;
   white-space: nowrap;
   background-color: #c65e17;
-  margin: 4px;
+  margin: 0.2vw;
 }
 
 #corps{
