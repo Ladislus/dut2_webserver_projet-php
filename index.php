@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Page d'accueil</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="shortcut icon" type="image/png" href="image/vignette.png" />
 
     <script src="jquery.js"></script>
@@ -25,11 +25,6 @@
            placeholder="Entrez une recherche"
            autocomplete="off"
            onkeyup="reloadTitre()" >
-
-  <br><a id="lien" href="listeEditeur.php">Accéder à la liste des éditeurs</a>
-  <br><a id="lien" href="listeJeu.php">Accéder à la liste des jeux</a>
-  <br><a id="lien" href="listeTheme.php">Accéder à la liste des thèmes</a>
-  <br><a id="lien" href="listeGenre.php">Accéder à la liste des genre</a>
 
   <div id="resultat">
   </div>
