@@ -35,14 +35,14 @@
       printf("Échec de la connexion : %s\n", $e->getMessage());
       exit();
     }
-    $sql="SELECT * from JEU j1 NATURAL JOIN GENRE NATURAL JOIN ESTDUGENRE";
+    $sql="SELECT DISTINCT * from GENRE ORDER BY NOMGENRE";
     if(!$connexion->query($sql)) echo "Pb d'accès à la liste";
     else{
       ?>
       <dl>
         <?php
         foreach ($connexion->query($sql) as $row)
-        echo "<dt style='font-style:italic'>".$row['NOMGENRE']."</dt><dd>Liste des jeux de ce genre ".$row['NOMJ']."</dd></dt>\n<br>";
+        echo "<dt style='font-style:italic'>".$row['NOMGENRE']."</dt>\n<br>";
       ?>
       </dl>
     <?php } ?>

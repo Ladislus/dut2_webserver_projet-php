@@ -24,7 +24,7 @@
       printf("Échec de la connexion : %s\n", $e->getMessage());
       exit();
     }
-    $sql="SELECT * from JEU NATURAL JOIN THEME NATURAL JOIN ESTDUTHEME";
+    $sql="SELECT DISTINCT * from JEU NATURAL JOIN THEME NATURAL JOIN ESTDUTHEME";
     if(!$connexion->query($sql)) echo "Pb d'accès à la liste";
     else{
       ?>
