@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="shortcut icon" type="image/png" href="image/vignette.png" />
 
-    <script src="jquery.js"></script>
+    <script src="ressource/jquery.js"></script>
     <script>
     function reloadTitre() { $('#resultat').load('rechercher.php', { recherche: $('#rechercheTitre').val() }); }
     </script>
