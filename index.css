@@ -1,6 +1,5 @@
 input[type=text] {
     width: 25%;
-    font-size: 1.2vw;
     margin-top: 3%;
     margin-left: 3%;
     margin-right: 3%;
@@ -18,62 +17,89 @@ input[type=text] {
 body {
   padding:0px;
   margin:0px;
-  background-color: #c65e17;
+  background-color: #313a43;
 }
 
 header{
-  text-align: center;
-  background-color: #11699b;
+  overflow: auto;
   width: 100%;
+  background-color: #313a43;
 }
 
-img{
-  height: 10vw;
+header #leftside{
+  float: left;
+  display: inline-block;
+}
+
+header img{
+  vertical-align: middle;
+  height: 5vw;
   width: auto;
+  display: inline-block;
+}
+
+header h1{
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: "URW Chancery L";
+  font-size: 180%;
+}
+
+header #liens{
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 2.5%;
+}
+
+header #lien {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 100%;
+  font-family: sans-serif;
+  opacity: 0.75;
+  transition: 0.3s;
+  text-align: left;
+  margin-right: 50px;
+}
+
+header #lien:hover {
+  opacity: 1;
+}
+
+#corps{
+  margin: 5px;
+  background-color: #e54a4e;
+  min-height: 800px;
 }
 
 #resultat {
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 5%;
-  padding: 1vw;
-  background-color: #11889a;
-  border-color: #000000;
-  border-style: solid;
+  background-color: #313a43;
 }
 
-#lien {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 1.75vw;
-  text-align: center;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 2px;
-  background-color: #f7914c;
-  opacity: 0.75;
-  border-radius: 3px;
-  transition: 0.3s;
-}
+ #resultat h1{
+   color: #FFFFFF;
+   text-decoration: none;
+   font-size: 200%;
+   font-family: sans-serif;
+   opacity: 0.75;
+   transition: 0.3s;
+   text-align: center;
+   margin-right: 50px;
+ }
 
-#lien:hover {
-  opacity: 1;
-}
-
-#liens{
-  text-align: center;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: #c65e17;
-  margin: 0.2vw;
-}
-
-#corps{
-  margin: 5px;
-  background-color: #11699b;
-  min-height: 800px;
-}
+ #resultat a{
+   color: #FFFFFF;
+   text-decoration: none;
+   font-size: 100%;
+   font-family: sans-serif;
+   opacity: 0.75;
+   transition: 0.3s;
+   text-align: center;
+   margin-right: 50px;
+ }
 
 footer{
   margin-left: 10px;
