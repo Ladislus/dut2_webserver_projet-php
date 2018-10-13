@@ -36,7 +36,7 @@
   else {
     $result = $connexion->query($sql)->fetch();
     echo "<div class=\"left\">\n";
-    echo "<img id=\"image\" src=\"image/jeu/".$result['IDJ'].".png\">\n";
+    echo "<img id=\"image\" src=\"../image/jeu/".$result['IDJ'].".png\">\n";
     echo "</div>\n";
     echo "<div class=\"right\">\n";
     echo "<p id=\"name\">Titre: ".$result['NOMJ']."</p>\n";
