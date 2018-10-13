@@ -3,7 +3,7 @@
   include 'headerEditeur.php';
 
   #Infos de connexion à la BD
-  require("../connect.php");
+  require("../BD/connect.php");
 
   #Création de la connexion
   $dsn="mysql:dbname=".BASE.";host=".SERVER;
@@ -19,7 +19,7 @@
           FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR
           WHERE IDE = '$id'";
   foreach ($connexion->query($sql) as $row) {
-    $jeu = "<a href='jeu.php?id=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n"; }
+    $jeu = $jeu."<a href='jeu.php?id=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n"; }
 
   $sql = "SELECT DISTINCT NOME, SIEGESOCIETE, DATECREATION, ETAT, DESCE
           FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR NATURAL JOIN ESTDUGENRE NATURAL JOIN GENRE NATURAL JOIN ESTDUTHEME NATURAL JOIN THEME

@@ -3,7 +3,7 @@
   include 'headerJeu.php';
 
   #Infos de connexion à la BD
-  require("../connect.php");
+  require("../BD/connect.php");
 
   #Création de la connexion
   $dsn="mysql:dbname=".BASE.";host=".SERVER;
