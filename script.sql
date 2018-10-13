@@ -65,6 +65,7 @@ CREATE TABLE ESTDUTHEME (
   CONSTRAINT fk_estdutheme_theme FOREIGN KEY (IDT) REFERENCES THEME(IDT) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 INSERT INTO JEU     (NOMJ, DATESORTIE, DESCJ)                        VALUES ('The Legend of Zelda : Ocarina of Time', '1998-11-21', 'Trop bien ce jeu, c\'est l\'histoire du héros Zelda qui doit sauver la princess Link danc cet épopée épique.'),
                                                                             ('Minecraft', '2011-11-18', 'Minecraft est un jeu indépendant trop cool'),
                                                                             ('Super Mario 64', '1996-06-23', 'Dans cet episode Mario doit récolter des étoiles pour sauver des terrifiantes griffes de Bowser sa bien aimée Princesse Beach, princesse du Royaume Champignon.'),
@@ -94,12 +95,25 @@ INSERT INTO EDITEUR (NOME, SIEGESOCIETE, DATECREATION, ETAT, DESCE)  VALUES ('Ni
                                                                                                                               Final Fantasy, Dragon Quest et Kingdom Hearts. Elle est parfois incorrectement désignée par le
                                                                                                                               nom de son ancienne gamme, « Squaresoft ». '),
                                                                             ('SEGA', 'Japon', '','OUVERT', 'SEGA C\'EST PLUS FORT QUE TOI');
+=======
+INSERT INTO JEU     (NOMJ, DATESORTIE, DESCJ)                        VALUES ('The Legend of Zelda : Ocarina of Time', '1998-11-21', 'Trop bien ce jeu, c\'est l\istoire de zelda qui sauve link.'),
+                                                                            ('Minecraft', '2011-11-18', 'Minecraft est un jeu indépendant trop cool'),
+                                                                            ('Jean-Paul II the Ultimate Game', '2019-05-05', 'Jean paul Ii est revenu des morts pour boutés les monstres des enfers.');
+INSERT INTO EDITEUR (NOME, SIEGESOCIETE, DATECREATION, ETAT, DESCE)  VALUES ('Nintendo', 'Japon', '1883-09-23', 'OUVERT', 'Nintendo (任天堂株式会社, Nintendō kabushiki gaisha?) est une entreprise multinationale
+                                                                                                                          japonaise fondée en 1889 par Fusajiro Yamauchi5 près de Kyoto au Japon.
+                                                                                                                          A ses débuts, la société produisait des cartes à jouer japonaises : les Hanafuda.
+                                                                                                                          C’est à partir des années 1970 que la société a diversifié ses activités en produisant
+                                                                                                                          des jouets et des bornes d’arcade. Elle a été l’une des principales sociétés précurseurs du jeu vidéo. '),
+                                                                            ('Mojang', 'Finland', '2007-10-04', 'OUVERT', 'Mojang est une entreprise suédoise indépendante.'),
+                                                                            ('SuperSWAG&Co', 'Vatican', '2000-02-02', 'FERME', 'incoonu a ca');
+>>>>>>> ec8b022efcc83452ccf98d6fd92ae2a25515e9a7
 INSERT INTO GENRE   (NOMGENRE)                                       VALUES ('RPG'),
                                                                             ('MMORPG'),
                                                                             ('Multijoueur'),
                                                                             ('Simulation'),
                                                                             ('Survie'),
                                                                             ('Stratégie'),
+<<<<<<< HEAD
                                                                             ('Gestion'),
                                                                             ('Steampunk');
 INSERT INTO THEME   (NOMTHEME)                                       VALUES ('Fantasy'),
@@ -130,3 +144,18 @@ INSERT INTO ESTDUTHEME (IDJ, IDT)                                    VALUES (1,1
                                                                             (6,3), (6,4),
                                                                             (7,1), (7,2), (7,3),
                                                                             (8,1), (8,2);
+=======
+                                                                            ('Gestion');
+INSERT INTO THEME   (NOMTHEME)                                       VALUES ('Fantasy'),
+                                                                            ('Science-Fiction'),
+                                                                            ('Post-Apocalyptic');
+INSERT INTO ESTEDITER (IDJ, IDE)                                     VALUES (1,1),
+                                                                            (2,2),
+                                                                            (3,3);
+INSERT INTO ESTDUGENRE (IDJ, IDG)                                    VALUES (1,1), (1,7),
+                                                                            (2,1), (2,3), (2,4), (2,5), (2,7),
+                                                                            (3,1), (3,2), (3,3), (3,5);
+INSERT INTO ESTDUTHEME (IDJ, IDT)                                    VALUES (1,1), (1,2),
+                                                                            (2,3),
+                                                                            (3,3);
+>>>>>>> ec8b022efcc83452ccf98d6fd92ae2a25515e9a7
