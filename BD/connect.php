@@ -1,6 +1,6 @@
 <?php
-  define ('USER',"charlotte");
-  define('PASSWD',"charlotte");
+  define ('USER',"walcak");
+  define('PASSWD',"walcak");
   define('SERVER',"servinfo-mariadb");
-  define('BASE',"DBcharlotte");
+  define('BASE',"DBwalcak");
 ?>
