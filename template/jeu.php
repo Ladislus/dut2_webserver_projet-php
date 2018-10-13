@@ -1,5 +1,7 @@
 <?php
 
+  include 'headerJeu.php';
+
   #Infos de connexion à la BD
   require("../connect.php");
 
@@ -28,22 +30,31 @@
     if(empty($theme)) { $theme = $row['NOMTHEME']; }
     else { $theme = $theme.", ".$row['NOMTHEME']; }}
 
-  $sql = "SELECT DISTINCT IDJ, NOMJ, DATESORTIE, NOME, DESCJ
+  $sql = "SELECT DISTINCT NOMJ, DATESORTIE, IDE, NOME, DESCJ
           FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR NATURAL JOIN ESTDUGENRE NATURAL JOIN GENRE NATURAL JOIN ESTDUTHEME NATURAL JOIN THEME
           WHERE IDJ = '$id'";
 
   if(!$connexion->query($sql)) echo "Pb d'accès à la BD";
   else {
     $result = $connexion->query($sql)->fetch();
+
+    echo "<title>".$result['NOMJ']."</title>";
+    echo "</head>";
     echo "<div class=\"left\">\n";
+<<<<<<< HEAD
     echo "<img id=\"image\" src=\"../image/jeu/".$result['IDJ'].".png\">\n";
+=======
+    echo "<img src=\"../image/jeu/".$id.".png\">\n";
+>>>>>>> d31f09e60bb157b0c2f9aa0811c38ed699343561
     echo "</div>\n";
     echo "<div class=\"right\">\n";
-    echo "<p id=\"name\">Titre: ".$result['NOMJ']."</p>\n";
-    echo "<p id=\"sortie\">Date de sortie: ".$result['DATESORTIE']."</p>\n";
-    echo "<p id=\"editeur\">Editer par: ".$result['NOME']."</p>\n";
-    echo "<p id=\"genre\">Genre: ".$genre."</p>\n";
-    echo "<p id=\"theme\">Thème: ".$theme."</p>\n";
-    echo "<p id=\"desc\">".$result['DESCJ']."</p>\n";
+    echo "<p><b>Titre:</b> ".$result['NOMJ']."</p>\n";
+    echo "<p><b>Date de sortie:</b> ".$result['DATESORTIE']."</p>\n";
+    echo "<p><b>Editer par:</b> <a href='editeur.php?id=".urlencode($result['IDE'])."'>".$result['NOME']."</a></p>\n";
+    echo "<p><b>Genre:</b> ".$genre."</p>\n";
+    echo "<p><b>Thème:</b> ".$theme."</p>\n";
+    echo "<p>".$result['DESCJ']."</p>\n";
     echo "</div>"; }
+
+    include "footer.php";
 ?>

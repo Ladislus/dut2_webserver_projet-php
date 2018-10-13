@@ -39,32 +39,4 @@
     foreach ($connexion->query($sql) as $row) {
       echo "<a href='template/editeur.php?id=".urlencode($row['IDE'])."'>".$row['NOME']."</a><br/>\n"; }}}
 
-###########################################################################
-
-  #Query "GENRE" dans la BD
-  $sql = "SELECT * FROM GENRE WHERE NOMGENRE LIKE '%$recherche%'";
-  #Lancement de $sql
-  if(!$connexion->query($sql)) echo "Pb d'accès au JEU";
-  else {
-    if(($connexion->query($sql)->rowCount() == 0) or empty($recherche)) { echo ""; }
-    else {
-        echo "<h1> GENRE </h1>";
-    # Affichage des genres
-    foreach ($connexion->query($sql) as $row) {
-      echo "<a href='template/genre.php?id=".urlencode($row['IDG'])."'>".$row['NOMGENRE']."</a><br/>\n"; }}}
-
-###########################################################################
-
-  #Query "THEME" dans la BD
-  $sql = "SELECT * FROM THEME WHERE NOMTHEME LIKE '%$recherche%'";
-  #Lancement de $sql
-  if(!$connexion->query($sql)) echo "Pb d'accès au JEU";
-  else {
-    if(($connexion->query($sql)->rowCount() == 0) or empty($recherche)) { echo ""; }
-    else {
-        echo "<h1> THEME </h1>";
-    # Affichage des jeux
-    foreach ($connexion->query($sql) as $row) {
-      echo "<a href='template/theme.php?id=".urlencode($row['IDT'])."'>".$row['NOMTHEME']."</a><br/>\n"; }}}
-      
 ?>
