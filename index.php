@@ -16,18 +16,37 @@
 
     <!-- Bannière -->
     <header>
-      <img src="image/banniere.png" class="center">
+      <div id="leftside"><img src="image/logo.png">
+      <h1>GameLand<h1></div>
+      <!-- Liens -->
+      <div id="liens">
+        <a id="lien" href="listeEditeur.php">Accéder aux éditeurs</a>
+        <a id="lien" href="listeJeu.php">Accéder aux jeux</a>
+        <a id="lien" href="listeTheme.php">Accéder aux thèmes</a>
+        <a id="lien" href="listeGenre.php">Accéder aux genres</a>
+      </div>
     </header>
 
+    <div id="corps">
     <!-- Barre de recherche -->
-    <input type="text"
-           id="rechercheTitre"
-           placeholder="Entrez une recherche"
-           autocomplete="off"
-           onkeyup="reloadTitre()" >
+      <input type="text"
+            id="rechercheTitre"
+            placeholder="Entrez le nom d'un jeu"
+            autocomplete="off"
+            onkeyup="reloadTitre()" >
 
+<<<<<<< HEAD
   <div id="resultat">
   </div>
 
+=======
+      <div id="resultat">
+      </div>
+    </div>
+
+    <footer>
+      <small>&copy; Copyright 2018, Tous droits réservés, CHARLOTTE, DUPRE, WALCAK</small>
+    </footer>
+>>>>>>> ec8b022efcc83452ccf98d6fd92ae2a25515e9a7
   </body>
 </html>
