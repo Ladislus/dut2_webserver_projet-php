@@ -35,11 +35,6 @@
             autocomplete="off"
             onkeyup="reloadTitre()" >
 
-<<<<<<< HEAD
-  <div id="resultat">
-  </div>
-
-=======
       <div id="resultat">
       </div>
     </div>
@@ -47,6 +42,5 @@
     <footer>
       <small>&copy; Copyright 2018, Tous droits réservés, CHARLOTTE, DUPRE, WALCAK</small>
     </footer>
->>>>>>> ec8b022efcc83452ccf98d6fd92ae2a25515e9a7
   </body>
 </html>
