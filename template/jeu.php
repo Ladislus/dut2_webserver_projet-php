@@ -1,6 +1,6 @@
 <?php
 
-  include 'headerJeu.php';
+  include 'header.php';
 
   #Infos de connexion à la BD
   require("../BD/connect.php");
@@ -39,7 +39,9 @@
     $result = $connexion->query($sql)->fetch();
 
     echo "<title>".$result['NOMJ']."</title>";
+    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/jeu.css\">";
     echo "</head>";
+    #include "banniere.php";
     echo "<div class=\"left\">\n";
     echo "<img src=\"../image/jeu/".$id.".png\">\n";
     echo "</div>\n";

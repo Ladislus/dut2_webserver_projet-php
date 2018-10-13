@@ -1,6 +1,6 @@
 <?php
 
-  include 'headerEditeur.php';
+  include 'header.php';
 
   #Infos de connexion à la BD
   require("../BD/connect.php");
@@ -28,6 +28,9 @@
   if(!$connexion->query($sql)) echo "Pb d'accès à la BD";
   else {
     $result = $connexion->query($sql)->fetch();
+    echo "<title>".$result['NOME']."</title>";
+    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/editeur.css\">";
+    echo "</head>";
     echo "<div class=\"left\">\n";
     echo "<img id=\"image\" src=\"../image/editeur/".$id.".png\">\n";
     echo "</div>\n";

@@ -8,7 +8,7 @@
 
     <script src="ressource/jquery.js"></script>
     <script>
-    function reloadTitre() { $('#resultat').load('rechercher.php', { recherche: $('#rechercheTitre').val() }); }
+    function reloadTitre() { $('#resultat').load('script/rechercher.php', { recherche: $('#recherche').val() }); }
     </script>
 
   </head>
@@ -30,8 +30,8 @@
     <div id="corps">
     <!-- Barre de recherche -->
       <input type="text"
-            id="rechercheTitre"
-            placeholder="Entrez le nom d'un jeu"
+            id="recherche"
+            placeholder="Entrez votre recherche"
             autocomplete="off"
             onkeyup="reloadTitre()" >
 
