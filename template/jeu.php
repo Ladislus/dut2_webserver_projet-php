@@ -41,11 +41,7 @@
     echo "<title>".$result['NOMJ']."</title>";
     echo "</head>";
     echo "<div class=\"left\">\n";
-<<<<<<< HEAD
-    echo "<img id=\"image\" src=\"../image/jeu/".$result['IDJ'].".png\">\n";
-=======
     echo "<img src=\"../image/jeu/".$id.".png\">\n";
->>>>>>> d31f09e60bb157b0c2f9aa0811c38ed699343561
     echo "</div>\n";
     echo "<div class=\"right\">\n";
     echo "<p><b>Titre:</b> ".$result['NOMJ']."</p>\n";

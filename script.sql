@@ -97,21 +97,10 @@ INSERT INTO THEME   (NOMTHEME)                                       VALUES ('Fa
                                                                             ('Post-Apocalyptic');
 INSERT INTO ESTEDITER (IDJ, IDE)                                     VALUES (1,1),
                                                                             (2,2),
-<<<<<<< HEAD
                                                                             (3,3);
 INSERT INTO ESTDUGENRE (IDJ, IDG)                                    VALUES (1,1), (1,7),
                                                                             (2,1), (2,3), (2,4), (2,5), (2,7),
                                                                             (3,1), (3,2), (3,3), (3,5);
-=======
-                                                                            (3,1),
-                                                                            (4,3),
-                                                                            (5,1);
-INSERT INTO ESTDUGENRE (IDJ, IDG)                                    VALUES (1,1),
-                                                                            (2,1), (2,3), (2,4), (2,5), (2,7),
-                                                                            (3,4),
-                                                                            (4,1), (4,2), (4,3), (4,5),
-                                                                            (5,1);
->>>>>>> d31f09e60bb157b0c2f9aa0811c38ed699343561
 INSERT INTO ESTDUTHEME (IDJ, IDT)                                    VALUES (1,1), (1,2),
                                                                             (2,3),
                                                                             (3,1), (3,2),

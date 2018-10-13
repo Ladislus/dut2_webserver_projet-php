@@ -3,13 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Page d'accueil</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="shortcut icon" type="image/png" href="/image/vignette.png" />
-=======
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="shortcut icon" type="image/png" href="image/vignette.png" />
->>>>>>> d31f09e60bb157b0c2f9aa0811c38ed699343561
 
     <script src="jquery.js"></script>
     <script>
@@ -40,14 +35,9 @@
             autocomplete="off"
             onkeyup="reloadTitre()" >
 
-<<<<<<< HEAD
       <div id="resultat">
       </div>
     </div>
-=======
-  <div id="resultat">
-  </div>
->>>>>>> d31f09e60bb157b0c2f9aa0811c38ed699343561
 
     <footer>
       <small>&copy; Copyright 2018, Tous droits réservés, CHARLOTTE, DUPRE, WALCAK</small>
