@@ -9,7 +9,20 @@
   </head>
   <body>
     <header>
-      <a href="index.php"><img src="http://www.webzeen.fr/wp-content/uploads/2016/03/Banni%C3%A8re-Jeux-vid%C3%A9os.png" class="center"></a>
+      <div id="leftside">
+        <img src="image/logo.png">
+        <h1>GameLand<h1>
+      </div>
+      <!-- Liens -->
+      <div id="rightside">
+        <div id="liens">
+          <a id="lien" href="listeEditeur.php">Accéder aux éditeurs</a>
+          <a id="lien" href="listeJeu.php">Accéder aux jeux</a>
+          <a id="lien" href="listeTheme.php">Accéder aux thèmes</a>
+          <a id="lien" href="listeGenre.php">Accéder aux genres</a>
+        </div>
+        <a id="ajouter" href="ajouterJeu.php">Ajouter un jeu</a>
+      </div>
     </header>
     <h1>
       Liste de tous les éditeurs
