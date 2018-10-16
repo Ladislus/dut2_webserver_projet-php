@@ -123,6 +123,7 @@ input[type=text] {
 
 footer{
   margin-left: 2%;
+  margin-bottom: 1%;
   align-items: flex-end;
   color: #FFFFFF;
 }
