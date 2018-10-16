@@ -21,15 +21,15 @@
         <h1>GameLand<h1>
       </div>
       <!-- Liens -->
-        <div id="liens">
-          <a id="lien" href="listeEditeur.php">Accéder aux éditeurs</a>
-          <a id="lien" href="listeJeu.php">Accéder aux jeux</a>
-          <a id="lien" href="listeTheme.php">Accéder aux thèmes</a>
-          <a id="lien" href="listeGenre.php">Accéder aux genres</a>
-        </div>
-        <div id="bouton">
-          <a id="ajouter" href="ajouterJeu.php">Ajouter un jeu</a>
-        </div>
+      <div id="liens">
+        <a id="lien" href="listeEditeur.php">Accéder aux éditeurs</a>
+        <a id="lien" href="listeJeu.php">Accéder aux jeux</a>
+        <a id="lien" href="listeTheme.php">Accéder aux thèmes</a>
+        <a id="lien" href="listeGenre.php">Accéder aux genres</a>
+      </div>
+      <div id="bouton">
+        <a id="ajouter" href="ajouterJeu.php">Ajouter un jeu</a>
+      </div>
     </header>
 
     <div id="corps">
