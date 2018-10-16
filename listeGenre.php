@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>
-      Liste des éditeurs
+      Liste des genres
     </title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="index.css">
@@ -9,24 +9,22 @@
   </head>
   <body>
     <header>
-      <div id="leftside">
-        <img src="image/logo.png">
-        <h1>GameLand<h1>
-      </div>
-      <!-- Liens -->
-      <div id="rightside">
-        <div id="liens">
-          <a id="lien" href="listeEditeur.php">Accéder aux éditeurs</a>
-          <a id="lien" href="listeJeu.php">Accéder aux jeux</a>
-          <a id="lien" href="listeTheme.php">Accéder aux thèmes</a>
-          <a id="lien" href="listeGenre.php">Accéder aux genres</a>
-        </div>
-        <a id="ajouter" href="ajouterJeu.php">Ajouter un jeu</a>
-      </div>
+      <a href="index.php"><img src="http://www.webzeen.fr/wp-content/uploads/2016/03/Banni%C3%A8re-Jeux-vid%C3%A9os.png" class="center"></a>
+
+      <script src="jquery.js"></script>
+      <script>
+      function reloadTitre() { $('#resultat').load('rechercherGenre.php', { rechercheGenre: $('#rechercheGenre').val() }); }
+      </script>
     </header>
     <h1>
-      Liste de tous les éditeurs
+      Liste de tous les genres
     </h1>
+    <input type="text"
+           id="rechercheGenre"
+           placeholder="Entrez le nom d'un genre"
+           autocomplete="off"
+           onkeyup="reloadTitre()" >
+
     <?php
     require("connect.php");
     $dsn="mysql:dbname=".BASE.";host=".SERVER;
@@ -37,16 +35,18 @@
       printf("Échec de la connexion : %s\n", $e->getMessage());
       exit();
     }
-    $sql="SELECT * from EDITEUR";
+    $sql="SELECT DISTINCT * from GENRE ORDER BY NOMGENRE";
     if(!$connexion->query($sql)) echo "Pb d'accès à la liste";
     else{
       ?>
       <dl>
         <?php
         foreach ($connexion->query($sql) as $row)
-        echo "<dt style='font-style:italic'>".$row['NOME']."</dt><dd>".$row['SIEGESOCIETE']." créé en ".$row['DATECREATION']." ETAT: ".$row['ETAT']."</dd></dt>\n<br>";
+        echo "<dt style='font-style:italic'>".$row['NOMGENRE']."</dt>\n<br>";
       ?>
       </dl>
     <?php } ?>
+    <div id="resultat">
+    </div>
   </body>
 </html>
