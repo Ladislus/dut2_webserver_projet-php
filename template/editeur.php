@@ -31,6 +31,7 @@
     echo "<title>".$result['NOME']."</title>";
     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/editeur.css\">";
     echo "</head>";
+    #include "banniere.php";
     echo "<div class=\"left\">\n";
     echo "<img id=\"image\" src=\"../image/editeur/".$id.".png\">\n";
     echo "</div>\n";
