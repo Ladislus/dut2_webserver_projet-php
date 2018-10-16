@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Page d'accueil</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="shortcut icon" type="image/png" href="image/vignette.png" />
 
-    <script src="jquery.js"></script>
+    <script src="ressource/jquery.js"></script>
     <script>
-    function reloadTitre() { $('#resultat').load('rechercher.php', { recherche: $('#rechercheTitre').val() }); }
+    function reloadTitre() { $('#resultat').load('script/rechercher.php', { recherche: $('#recherche').val() }); }
     </script>
 
   </head>
@@ -22,10 +22,11 @@
       </div>
       <!-- Liens -->
       <div id="liens">
-        <a id="lien" href="listeEditeur.php">Accéder aux éditeurs</a>
-        <a id="lien" href="listeJeu.php">Accéder aux jeux</a>
-        <a id="lien" href="listeTheme.php">Accéder aux thèmes</a>
-        <a id="lien" href="listeGenre.php">Accéder aux genres</a>
+        <a id="lien" href="script/listeEditeur.php">Accéder aux éditeurs</a>
+        <a id="lien" href="script/listeJeu.php">Accéder aux jeux</a>
+        <a id="lien" href="script/listeTheme.php">Accéder aux thèmes</a>
+        <a id="lien" href="script/listeGenre.php">Accéder aux genres</a>
+        <a id="lien" href="script/insertion.php">Ajouter un jeu</a>
       </div>
       <div id="bouton">
         <a id="ajouter" href="ajouterJeu.php">Ajouter un jeu</a>
@@ -35,8 +36,8 @@
     <div id="corps">
     <!-- Barre de recherche -->
       <input type="text"
-            id="rechercheTitre"
-            placeholder="Entrez le nom d'un jeu"
+            id="recherche"
+            placeholder="Entrez votre recherche"
             autocomplete="off"
             onkeyup="reloadTitre()" >
 
