@@ -1,29 +1,129 @@
-input[type=text] {
-    height: 5%;
-    width: 25%;
+a{
+  opacity: 0.75;
+  transition: 0.3s;
 }
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 100%; }
+
+a:hover{
+  opacity: 1;
+}
+
+html{
+  height: 100%;
+}
+
 body {
-  background-color: #d3d3d3;
+  padding:0%;
+  margin:0%;
+  background-color: #313a43;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-#resultat {
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: #cccccc;
+header{
+  background-color: #313a43;
+  display: flex;
 }
 
-#lien {
-  color: #383534;
-  text-decoration: none;
+header #leftside{
+  align-items: flex-start;
+  white-space: nowrap;
+  margin-left: 2%;
 }
 
 header img{
-  padding-bottom: 1%;
+  vertical-align: middle;
+  height: 5vw;
+  width: auto;
+}
+
+header h1{
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: "URW Chancery L";
+  font-size: 180%;
+}
+
+header #liens{
+  margin: auto;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+}
+
+header #lien {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 100%;
+  font-family: sans-serif;
+  text-align: left;
+  margin: 1.5%;
+  white-space: nowrap;
+}
+
+header #bouton{
+  vertical-align: middle;
+  margin: auto;
+  margin-left: 0%;
+  margin-right: 7%;
+}
+
+header #ajouter{
+  text-decoration: none;
+  border-radius: 25%;
+  padding: 5%;
+  background-color: #e54a4e;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+#corps{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  padding: 1%;
+  background-color: #e54a4e;
+  min-height: 200%;
+}
+
+input[type=text] {
+  width: 25%;
+  margin: auto;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+
+#resultat {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 0%;
+  background-color: #313a43;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#resultat h1{
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 200%;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#resultat a{
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 100%;
+  font-family: sans-serif;
+  margin-bottom: 2%;
+}
+
+footer{
+  margin-left: 2%;
+  margin-bottom: 1%;
+  align-items: flex-end;
+  color: #FFFFFF;
 }
