@@ -34,7 +34,7 @@
   else {
     if(($connexion->query($sql)->rowCount() == 0) or empty($recherche)) { echo ""; }
     else {
-        echo "<h1> EDITEUR </h1>";
+        echo "<h1> EDITEURS </h1>";
     # Affichage des éditeurs
     foreach ($connexion->query($sql) as $row) {
       echo "<a href='template/editeur.php?id=".urlencode($row['IDE'])."'>".$row['NOME']."</a><br/>\n"; }}}
