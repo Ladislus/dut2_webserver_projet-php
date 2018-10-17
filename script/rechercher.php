@@ -14,9 +14,9 @@
   $recherche = $_POST['recherche'];
 
   #Query "JEU" dans la BD
-  $sql = "SELECT * FROM JEU WHERE NOMJ LIKE '%$recherche%'";
+  $sql = "SELECT * FROM JEU WHERE NOMJ LIKE '%$recherche%' ORDER BY NOMJ ASC";
   #Lancement de $sql
-  if(!$connexion->query($sql)) echo "Pb d'accès au JEU";
+  if(!$connexion->query($sql)) echo "Pb d'accès à JEU";
   else {
     if(($connexion->query($sql)->rowCount() == 0) or empty($recherche)) { echo ""; }
     else {
@@ -28,9 +28,9 @@
 ###########################################################################
 
   #Query "EDITEUR" dans la BD
-  $sql = "SELECT * FROM EDITEUR WHERE NOME LIKE '%$recherche%'";
+  $sql = "SELECT * FROM EDITEUR WHERE NOME LIKE '%$recherche%' ORDER BY NOME ASC;";
   #Lancement de $sql
-  if(!$connexion->query($sql)) echo "Pb d'accès au JEU";
+  if(!$connexion->query($sql)) echo "Pb d'accès à EDITEUR";
   else {
     if(($connexion->query($sql)->rowCount() == 0) or empty($recherche)) { echo ""; }
     else {
