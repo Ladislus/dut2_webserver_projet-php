@@ -26,62 +26,67 @@ function get(nom) { return document.getElementsByName(nom)[0]; }
 
 function insertionBD() {
 
-  var nomJ = get("nomJ").value;
-  if (nomJ.length == 0) {
+  var nom = get("nomJ").value;
+  if (nom.length == 0) {
     alert("Rentrez un nom !");
     get("nomJ").focus();
     return; }
 
-  var dateJ = get("datesortie").value;
-  if (dateJ.length == 0) {
+  var date = get("datesortie").value;
+  if (date.length == 0) {
     alert("Rensignez une date de sortie !");
     get("datesortie").focus();
     return; }
 
-  var editeurJ = get("editeur").value;
-  if (editeurJ.length == 0) {
+  var editeur = get("editeur").value;
+  if (editeur.length == 0) {
     alert("Sélectionner un éditeur !");
     get("editeur").focus();
     return; }
 
   var selecteurGenre = get("genre");
-  var genreJ = [];
+  var genre = [];
   if (selecteurGenre.selectedOptions.length == 0) {
     alert("Veuillez selectionner au moins un genre !");
     selecteurGenre.focus();
     return; }
   else {
     for (i = 0; i < selecteurGenre.selectedOptions.length; i++) {
-      genreJ.push(selecteurGenre.selectedOptions[i].value); }}
+      genre.push(selecteurGenre.selectedOptions[i].value); }}
 
   var selecteurTheme = get("theme");
-  var themeJ = [];
+  var theme = [];
   if (selecteurTheme.selectedOptions.length == 0) {
     alert("Veuillez selectionner au moins un thème !");
     selecteurTheme.focus();
     return; }
   else {
     for (i = 0; i < selecteurTheme.selectedOptions.length; i++) {
-      themeJ.push(selecteurTheme.selectedOptions[i].value); }}
+      theme.push(selecteurTheme.selectedOptions[i].value); }}
 
-  var descJ = get("descriptionJeu").value
-  if (descJ.length < 10) {
+  var desc = get("descriptionJeu").value
+  if (desc.length < 10) {
     alert("Veuillez rensigner une description d'au moins 20 caractères !");
     get("descriptionJeu").focus();
     return; }
 
-  $.ajax({ url: 'query.php',
-           data: { nom: nomJ,
-                   editeur: editeurJ,
-                   date: dateJ,
-                   genre: genreJ,
-                   theme: themeJ,
-                   desc: descJ },
-           type: 'post',
-           success: function() {
-             alert("Jeu créé !");
-             document.location.href = "../index.php"; },
-           error: function(error) { alert(error); }}); }
+  // $.ajax({ url: 'query.php',
+  //          data: { nom: nomJ,
+  //                  editeur: editeurJ,
+  //                  date: dateJ,
+  //                  genre: genreJ,
+  //                  theme: themeJ,
+  //                  desc: descJ },
+  //          type: 'GET',
+  //          success: function() {
+  //            alert("Jeu créé !");
+  //            document.location.href = "../index.php"; },
+  //          error: function(error) { alert(error); }});
+
+  window.location.replace("query.php?nom=" + nom + "&editeur=" + editeur + "&date=" + date + "&genre="+ genre + "&theme=" + theme + "&desc=" + desc);
+
+}
+
 </script>
 
 <p>Nom du jeu:
