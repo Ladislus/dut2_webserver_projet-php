@@ -3,7 +3,7 @@
   include "../template/header.php";
 
   echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/liste/jeu-editeur.css\">";
-  echo "<title>Les jeux</title>";
+  echo "<title>Les editeurs</title>";
 
   include "../template/banniere.php";
 
@@ -21,7 +21,7 @@
 
   $sql = "SELECT IDE, NOME FROM EDITEUR ORDER BY NOME ASC";
   foreach($connexion->query($sql) as $row) {
-    echo "<div id=\"jeu\">\n";
+    echo "<div id=\"editeur\">\n";
     echo "<img src=\"../image/editeur/".$row['IDE'].".png\">\n";
     echo "<a href='../template/jeu.php?id=".urlencode($row['IDE'])."'>".$row['NOME']."</a><br/>\n";
     echo "</div><br>\n"; }

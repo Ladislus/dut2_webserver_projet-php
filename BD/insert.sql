@@ -28,15 +28,15 @@ INSERT INTO GENRE (NOMGENRE) VALUES ('RPG'),
                                     ('Simulation'),
                                     ('Survie'),
                                     ('Stratégie'),
-                                    ('Gestion'),
-                                    ('Steampunk');
+                                    ('Gestion');
 
 INSERT INTO THEME (NOMTHEME) VALUES ('Fantasy'),
                                     ('Science-Fiction'),
                                     ('Post-Apocalyptic'),
-                                    ('Guerre');
+                                    ('Guerre'),
+                                    ('Steampunk');
 
-INSERT INTO ESTEDITER (IDJ, IDE) VALUES (1,1),
+INSERT INTO ESTEDITE (IDJ, IDE) VALUES  (1,1),
                                         (2,2),
                                         (3,3),
                                         (4,4);
