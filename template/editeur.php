@@ -31,7 +31,9 @@
     echo "<title>".$result['NOME']."</title>";
     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/editeur.css\">";
     echo "</head>";
-    #include "banniere.php";
+    include "banniere.php";
+    echo "<div class=\"corps\">\n";
+    echo "<div class=\"infos\">\n";
     echo "<div class=\"left\">\n";
     echo "<img id=\"image\" src=\"../image/editeur/".$id.".png\">\n";
     echo "</div>\n";
@@ -41,13 +43,11 @@
     echo "<p><b>Siège social:</b> ".$result['SIEGESOCIETE']."</p>\n";
     echo "<p><b>Status:</b> ".$result['ETAT']."</p>\n";
     echo "<p>".$result['DESCE']."</p>\n";
-    echo "<div id=\"jeuGauche\">\n";
     echo "<p><b>Jeu de cet éditeur:</b></p>";
-    echo "</div>\n";
-    echo "<div id=\"jeuDroite\">";
     echo "<p>".$jeu."</p>";
-    echo "</div>";
-    echo "</div>"; }
+    echo "</div>\n";
+    echo "</div>\n";
+    echo "</div>\n"; }
 
     include "footer.php";
 ?>

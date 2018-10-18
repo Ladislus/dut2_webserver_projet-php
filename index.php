@@ -16,7 +16,7 @@
 
     <?php include "template/banniere.php"; ?>
 
-    <div id="corps">
+    <div class="corps">
     <!-- Barre de recherche -->
       <input type="text"
             id="recherche"

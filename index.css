@@ -66,23 +66,18 @@ header #bouton{
   margin: auto;
   margin-left: 0%;
   margin-right: 7%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 header #ajouter{
   text-decoration: none;
   border-radius: 25%;
   padding: 5%;
-  width: 100%;
-  margin: 2%;
   background-color: #e54a4e;
   color: #FFFFFF;
   white-space: nowrap;
 }
 
-.corps{
+#corps{
   flex:1;
   display: flex;
   flex-direction: column;
