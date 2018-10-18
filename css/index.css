@@ -143,6 +143,10 @@ h1{
   margin: auto;
 }
 
+img{
+  height: 200px;
+}
+
 footer{
   margin-left: 2%;
   margin-bottom: 1%;
