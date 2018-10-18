@@ -64,6 +64,7 @@
     echo "<p>".$result['DESCJ']."</p>\n";
     echo "</div>\n";
     echo "</div>\n";
+    echo "<input type=\"button\" value=\"Supprimer\" onclick=\"suppresionBD()\">";
     echo "</div>\n";}
 
     include "footer.php";
