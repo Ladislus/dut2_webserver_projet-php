@@ -33,9 +33,9 @@
             echo "<div class=\"item\">\n";
               echo "<div class=\"image\">\n";
                 echo "<img src=\"../image/jeu/".$jeu['IDJ'].".png\">\n";
-              echo "</div><br>\n";
+              echo "</div>\n";
               echo "<a href='../template/jeu.php?id=".urlencode($jeu['IDJ'])."'>".$jeu['NOMJ']."</a><br/>\n";
-            echo "</div><br>\n"; }}
+            echo "</div>\n"; }}
         echo "</div>\n"; }
 
   echo "</div>";
