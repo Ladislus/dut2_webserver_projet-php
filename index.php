@@ -45,6 +45,37 @@
 
       <div id="resultat">
       </div>
+
+      <div id="latest">
+        <h1>Quelques jeux:</h1>
+
+<?php
+
+  #Infos de connexion à la BD
+  require_once("BD/connect.php");
+
+  #Création de la connexion
+  $dsn="mysql:dbname=".BASE.";host=".SERVER;
+  try{ $connexion = new PDO($dsn, USER, PASSWD); }
+  catch(PDOException $e){
+      printf("Échec de la connexion : %s\n", $e->getMessage());
+      exit(); }
+
+  $sql = "SELECT IDJ, NOMJ FROM JEU";
+  $res = $connexion->query($sql)->fetchAll();
+
+  $ints = [];
+  while (sizeof($ints) < 3) {
+    $i = random_int(0, sizeof($res) - 1);
+    if (!in_array($i, $ints)) { array_push($ints, $i); }}
+  foreach ($ints as $value) {
+    echo "<div id=\"last\">\n";
+    echo "<img src=\"image/jeu/".$res[$value]['IDJ']."\">\n";
+    echo "</div>\n"; }
+
+?>
+
+      </div>
     </div>
 
     <footer>
