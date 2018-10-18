@@ -41,7 +41,7 @@
     echo "<title>".$result['NOMJ']."</title>";
     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/jeu.css\">";
     echo "</head>";
-    #include "banniere.php";
+    include "banniere.php";
     echo "<div class=\"left\">\n";
     echo "<img src=\"../image/jeu/".$id.".png\">\n";
     echo "</div>\n";
@@ -52,6 +52,9 @@
     echo "<p><b>Genre:</b> ".$genre."</p>\n";
     echo "<p><b>Thème:</b> ".$theme."</p>\n";
     echo "<p>".$result['DESCJ']."</p>\n";
+    echo "</div>";
+    echo "<div >";
+
     echo "</div>"; }
 
     include "footer.php";
