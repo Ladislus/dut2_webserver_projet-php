@@ -24,11 +24,15 @@
     $sql = "SELECT IDE, NOME FROM EDITEUR WHERE NOME LIKE '$char%' ORDER BY NOME ASC";
     if($connexion->query($sql)->fetch()) {
       echo "<h1>".$char."</h1>\n";
-      echo "<div class=\"infos\">\n";
+      echo "<div class=\"objet\">\n";
       foreach($connexion->query($sql) as $row) {
         echo "<div class=\"item\">\n";
-        echo "<img src=\"../image/editeur/".$row['IDE'].".png\">\n";
-        echo "<a href='../template/editeur.php?id=".urlencode($row['IDE'])."'>".$row['NOME']."</a><br/>\n";
+          echo "<div class='image'>\n";
+            echo "<img src=\"../image/editeur/".$row['IDE'].".png\">\n";
+          echo "</div>";
+            echo "<div class='text'>\n";
+          echo "</div>";
+          echo "<a href='../template/editeur.php?id=".urlencode($row['IDE'])."'>".$row['NOME']."</a><br/>\n";
         echo "</div><br>\n"; }
       echo "</div>"; }}
 
