@@ -33,7 +33,6 @@
     $result = $connexion->query($sql)->fetch();
     echo "<title>".$result['NOME']."</title>";
     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/editeur.css\">";
-    echo "</head>";
     include "banniere.php";
     echo "<div class=\"corps\">\n";
     echo "<div class=\"infos\">\n";

@@ -3,8 +3,7 @@
   include "../template/header.php";
 
   echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/insertion.css\">";
-  echo "<title>Ajout</title>";
-  echo "</head>";
+  echo "<title>Ajout d'un éditeur</title>";
 
   include "../template/banniere.php";
 
