@@ -1,6 +1,6 @@
 <?php
 
-  include "../template/header.php";
+  include "../template/banniere.php";
 
   echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/insertion.css\">";
   echo "<title>Ajout</title>";
@@ -88,7 +88,7 @@ function insertionBD() {
 }
 
 </script>
-
+<div class="corps">
 <p>Nom du jeu:
   <input type = "text"
          name = "nomJ"
@@ -145,7 +145,7 @@ function insertionBD() {
 </p>
 
 <input type="button" value="Inserer" onclick="insertionBD()">
-
+</div>
 <?php
 
   include "../template/footer.php";

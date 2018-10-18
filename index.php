@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Page d'accueil</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/banniere.css">
     <link rel="shortcut icon" type="image/png" href="image/vignette.png" />
 
     <script src="ressource/jquery.js"></script>

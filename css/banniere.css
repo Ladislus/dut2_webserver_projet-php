@@ -1,0 +1,61 @@
+header{
+  background-color: #313a43;
+  display: flex;
+}
+
+header #leftside{
+  align-items: flex-start;
+  white-space: nowrap;
+  margin-left: 2%;
+}
+
+header img{
+  vertical-align: middle;
+  height: 5vw;
+  width: auto;
+}
+
+header h1{
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: "URW Chancery L";
+  font-size: 180%;
+}
+
+header #liens{
+  margin: auto;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+}
+
+header #lien {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 100%;
+  font-family: sans-serif;
+  text-align: left;
+  margin: 1.5%;
+  white-space: nowrap;
+}
+
+header #bouton{
+  vertical-align: middle;
+  margin: auto;
+  margin-left: 0%;
+  margin-right: 7%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+header #ajouter{
+  text-decoration: none;
+  border-radius: 25%;
+  padding: 5%;
+  width: 100%;
+  margin: 2%;
+  background-color: #e54a4e;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
