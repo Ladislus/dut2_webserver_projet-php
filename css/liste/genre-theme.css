@@ -11,17 +11,24 @@
 }
 
 .objet{
-  width: 25%;
+  width: 100%;
+  margin-left: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
 }
 
 .item{
   margin-top: 10%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.text{
+  margin-left: 5%;
 }
 
 .corps img{
@@ -32,7 +39,7 @@
 .corps a{
   margin-left: 5%;
   text-decoration: none;
-  font-size: 100%;
+  font-size: 150%;
   color: #FFFFFF;
 }
 
@@ -44,5 +51,5 @@
 }
 
 .corps p{
-  align-self: center;
+  
 }
