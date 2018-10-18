@@ -5,7 +5,8 @@ INSERT INTO JEU (NOMJ, DATESORTIE, DESCJ) VALUES
   ('Valkyria Chronicles', '2008-04-24', 'Notre protagonniste est l\'enfant du héros de la dernière grande guerre. Vous devez sauver un pays voisin envailli par un autre pays pour son pétrole, ressource rare dans ce monde steampunk. Recommandé par Ladislas !'),
   ('Fire Emblem', '1990-01-10', 'Fire Emblem est un tactical RPG au tour par tour où vous incarnez un héros pour vaince les grands méchants agrougrou !'),
   ('Borderlands 2', '2012-12-21', 'EXPLOSIOOOON, BRUTAAAAASE, DU SAAAAANG, ET DES EXPLOSIOOOONSSSSS, et accessoirement le personnage principal le plus cool de l\'histoire du jeu vidéo: MONSIEUR TOOOOOOOOOOOORQUE et ses guns FONT DES EXPLOSIOOOONSSSSS!!! TROP COOOOOOOOOOOOOOOL'),
-  ('Silent Hill','1999-12-01','Silent Hill est un jeu vidéo de type survival horror développé par Konami CE Tokyo et édité par Konami. Réputé pour avoir révolutionné le jeu d\'horreur par son approche psychologique de la peur, le titre a connu un succès international.');
+  ('Silent Hill', '1999-12-01','Silent Hill est un jeu vidéo de type survival horror développé par Konami CE Tokyo et édité par Konami. Réputé pour avoir révolutionné le jeu d\'horreur par son approche psychologique de la peur, le titre a connu un succès international.'),
+  ('Metal Gear Solid V', '2015-09-01'; 'L\'invasion de l\'Afghanistan par l\'URSS au début des années 1980 bouleverse le cours de la guerre froide et a marqué une nouvelle ère tandis que le mercenaire légendaire compte bien faire part au monde entier de son retour alors qu\'il n\'est plus qu\'une légende tombée dans l\'oubli, tout cela dans la continuité d\'un plan à la gravité dramatique qu\'il prépare, afin de se venger de la mort de ses hommes, de ses camarades. ');
 
 INSERT INTO EDITEUR (NOME, SIEGESOCIETE, DATECREATION, ETAT, DESCE) VALUES
   ('Nintendo', 'Kyoto', '1883-09-23', 'OUVERT', 'Nintendo (任天堂株式会社, Nintendō kabushiki gaisha) est une entreprise multinationale
@@ -60,7 +61,8 @@ INSERT INTO ESTEDITE (IDJ, IDE) VALUES  (1,1),
                                         (4,4),
                                         (5,1),
                                         (6,7),
-                                        (7,6);
+                                        (7,6),
+                                        (8,6);
 
 
 INSERT INTO ESTDUGENRE (IDJ, IDG) VALUES (1,1),
@@ -69,7 +71,8 @@ INSERT INTO ESTDUGENRE (IDJ, IDG) VALUES (1,1),
                                          (4,6),
                                          (5,1), (5,5), (5,6), (5,7), (5,8),
                                          (6,1), (6,3), (6,5), (6,9), (6,11),
-                                         (7,5), (7,7), (7,10);
+                                         (7,5), (7,7), (7,10),
+                                         (8,4), (8,6), (8,10);
 
 INSERT INTO ESTDUTHEME (IDJ, IDT) VALUES (1,1), (1,6), (1,9),
                                          (2,1), (2,6), (2,9),
@@ -77,4 +80,5 @@ INSERT INTO ESTDUTHEME (IDJ, IDT) VALUES (1,1), (1,6), (1,9),
                                          (4,1), (4,4), (4,5), (4,6), (4,9),
                                          (5,1), (5,9),
                                          (6,1), (6,2), (6,6), (6,9),
-                                         (7,2), (7,7);
+                                         (7,2), (7,7),
+                                         (8,4), (8,6), (8,9);
