@@ -3,7 +3,7 @@
   include 'header.php';
 
   #Infos de connexion à la BD
-  require("../BD/connect.php");
+  require_once("../BD/connect.php");
 
   #Création de la connexion
   $dsn="mysql:dbname=".BASE.";host=".SERVER;

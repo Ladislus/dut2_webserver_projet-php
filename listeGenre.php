@@ -26,7 +26,7 @@
            onkeyup="reloadTitre()" >
 
     <?php
-    require("connect.php");
+    require_once("connect.php");
     $dsn="mysql:dbname=".BASE.";host=".SERVER;
     try{
       $connexion=new PDO($dsn,USER,PASSWD);
