@@ -17,7 +17,7 @@
       <a id="lien" href="script/listeGenre.php">Accéder aux genres</a>
     </div>
     <div id="bouton">
-      <a id="ajouter" href="../script/insertion.php">Ajouter un jeu</a>
-      <a id="ajouter" href="script/insertion.php">Ajouter un éditeur</a>
+      <a id="ajouter" href="../script/insertionJeu.php">Ajouter un jeu</a>
+      <a id="ajouter" href="../script/insertionEditeur.php">Ajouter un éditeur</a>
     </div>
   </header>
