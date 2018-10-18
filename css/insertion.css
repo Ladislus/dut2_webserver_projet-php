@@ -28,6 +28,8 @@
 
 .right{
   flex:1;
+  margin: auto;
+  margin-right: 5%;
 }
 
 input[type=button] {

@@ -31,6 +31,10 @@ header #leftside{
   margin-left: 2%;
 }
 
+header a{
+  color: #313a43;
+}
+
 header img{
   vertical-align: middle;
   height: 5vw;

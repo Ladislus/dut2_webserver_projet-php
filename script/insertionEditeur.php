@@ -75,39 +75,46 @@ function insertionBD() {
   window.location.replace("queryEditeur.php?nom=" + nom + "&siege=" + siege + "&date=" + date + "&etat=" + etat + "&desc=" + desc); }
 
 </script>
+<div class="corps">
+  <div class="infos">
+    <div class="left">
+      <p>Nom de l'éditeur:<br>
+        <input type = "text"
+               name = "nomE"
+               required pattern=[a-z]{2,100}
+               placeholder="Ex: SEGA">
+      </p>
 
-<p>Nom de l'éditeur:
-  <input type = "text"
-         name = "nomE"
-         required pattern=[a-z]{2,100}
-         placeholder="Ex: SEGA">
-</p>
+      <p>
+        Date de création:<br>
+        <input type="date" name="datecreation">
+      </p>
 
-<p>Siège social:
-  <input type = "text"
-         name = "siegeE"
-         required pattern=[a-z]{2,100}
-         placeholder="Ex: Tokyo">
-</p>
+      <p>Description:<br>
+        <textarea name="descriptionEditeur" rows="5" cols="50" placeholder="Entrez sa description" value="">
+        </textarea>
+      </p>
 
-<p>
-  Date de création: <input type="date" name="datecreation">
-</p>
+    </div>
+    <div class="right">
+      <p>Siège social:<br>
+        <input type = "text"
+               name = "siegeE"
+               required pattern=[a-z]{2,100}
+               placeholder="Ex: Tokyo">
+      </p>
 
-<p>Etat:
-<select name="etat">
-  <option value="" disabled selected>Veuillez selectionner un état</option>
-  <option value="OUVERT">Ouvert</option>
-  <option value="FERME">Fermé</option>
-</select></p>
+      <p>Etat:<br>
+      <select name="etat">
+        <option value="" disabled selected>Veuillez selectionner un état</option>
+        <option value="OUVERT">Ouvert</option>
+        <option value="FERME">Fermé</option>
+      </select></p>
+    </div>
+  </div>
 
-<p>Description:
-  <textarea name="descriptionEditeur" rows="5" cols="50" placeholder="Entrez sa description" value="">
-  </textarea>
-</p>
-
-<input type="button" value="Inserer" onclick="insertionBD()">
-
+  <input type="button" value="Insérer" onclick="insertionBD()">
+</div>
 <?php
 
   include "../template/footer.php";

@@ -29,6 +29,11 @@ header #leftside{
   align-items: flex-start;
   white-space: nowrap;
   margin-left: 2%;
+  text-decoration: none;
+}
+
+header a{
+  color: #313a43;
 }
 
 header img{
