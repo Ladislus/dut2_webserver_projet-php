@@ -10,8 +10,6 @@
       printf("Échec de la connexion : %s\n", $e->getMessage());
       exit(); }
 
-  var_dump($_GET);
-
   $nom = $_GET['nom'];
   $editeur = $_GET['editeur'];
   $date = $_GET['date'];

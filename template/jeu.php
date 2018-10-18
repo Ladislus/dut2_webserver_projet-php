@@ -1,3 +1,12 @@
+<script src="../ressource/jquery.js"></script>
+<script>
+
+  function suppressionBD() {
+    var id = "<?php echo $_GET['id']; ?>";
+    window.location.replace("../script/suppressionJeu.php?id=" + id); }
+
+</script>
+
 <?php
 
   include 'header.php';
@@ -40,8 +49,9 @@
 
     echo "<title>".$result['NOMJ']."</title>";
     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/jeu.css\">";
-    echo "</head>";
-    #include "banniere.php";
+    include "banniere.php";
+    echo "<div class=\"corps\">\n";
+    echo "<div class=\"infos\">\n";
     echo "<div class=\"left\">\n";
     echo "<img src=\"../image/jeu/".$id.".png\">\n";
     echo "</div>\n";
@@ -49,10 +59,13 @@
     echo "<p><b>Titre:</b> ".$result['NOMJ']."</p>\n";
     echo "<p><b>Date de sortie:</b> ".$result['DATESORTIE']."</p>\n";
     echo "<p><b>Editer par:</b> <a href='editeur.php?id=".urlencode($result['IDE'])."'>".$result['NOME']."</a></p>\n";
-    echo "<p><b>Genre:</b> ".$genre."</p>\n";
-    echo "<p><b>Thème:</b> ".$theme."</p>\n";
+    echo "<p><b>Genre(s):</b> ".$genre."</p>\n";
+    echo "<p><b>Thème(s):</b> ".$theme."</p>\n";
     echo "<p>".$result['DESCJ']."</p>\n";
-    echo "</div>"; }
+    echo "</div>\n";
+    echo "</div>\n";
+    echo "<input type=\"button\" value=\"Supprimer\" onclick=\"suppressionBD()\">";
+    echo "</div>\n";}
 
     include "footer.php";
 ?>

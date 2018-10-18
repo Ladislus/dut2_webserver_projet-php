@@ -16,10 +16,12 @@
 
     <!-- Bannière -->
     <header>
-      <div id="leftside">
-        <img src="image/logo.png">
-        <h1>GameLand<h1>
-      </div>
+      <a href="index.php">
+        <div id="leftside">
+          <img src="image/logo.png">
+          <h1>GameLand<h1>
+        </div>
+      </a>
       <!-- Liens -->
       <div id="liens">
         <a id="lien" href="script/listeEditeur.php">Accéder aux éditeurs</a>
@@ -28,11 +30,12 @@
         <a id="lien" href="script/listeGenre.php">Accéder aux genres</a>
       </div>
       <div id="bouton">
-        <a id="ajouter" href="script/insertion.php">Ajouter un jeu</a>
+        <a id="ajouter" href="script/insertionJeu.php">Ajouter un jeu</a>
+        <a id="ajouter" href="script/insertionEditeur.php">Ajouter un éditeur</a>
       </div>
     </header>
 
-    <div id="corps">
+    <div class="corps">
     <!-- Barre de recherche -->
       <input type="text"
             id="recherche"
