@@ -31,6 +31,7 @@
       </div>
       <div id="bouton">
         <a id="ajouter" href="script/insertion.php">Ajouter un jeu</a>
+        <a id="ajouter" href="script/insertion.php">Ajouter un éditeur</a>
       </div>
     </header>
 
