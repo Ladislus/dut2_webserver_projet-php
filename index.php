@@ -45,9 +45,9 @@
 
       <div id="resultat">
       </div>
-
-      <div id="latest">
-        <h1>Quelques jeux:</h1>
+      
+      <h1>Quelques jeux:</h1><br>
+      <div class="latest">
 
 <?php
 
@@ -69,7 +69,7 @@
     $i = random_int(0, sizeof($res) - 1);
     if (!in_array($i, $ints)) { array_push($ints, $i); }}
   foreach ($ints as $value) {
-    echo "<div id=\"last\">\n";
+    echo "<div class=\"last\">\n";
     echo "<img src=\"image/jeu/".$res[$value]['IDJ']."\">\n";
     echo "</div>\n"; }
 
