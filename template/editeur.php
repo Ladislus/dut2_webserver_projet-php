@@ -18,11 +18,14 @@
   $sql = "SELECT DISTINCT IDJ, NOMJ
           FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR
           WHERE IDE = '$id'";
-  foreach ($connexion->query($sql) as $row) {
-    $jeu = $jeu."<a href='jeu.php?id=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n"; }
+
+  if (!$connexion->query($sql)->fetch()) { $jeu = "Aucun jeu n'a été ajouté à cet éditeur.\n"; }
+  else {
+    foreach ($connexion->query($sql) as $row) {
+      $jeu = $jeu."<a href='jeu.php?id=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n"; }}
 
   $sql = "SELECT DISTINCT NOME, SIEGESOCIETE, DATECREATION, ETAT, DESCE
-          FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR NATURAL JOIN ESTDUGENRE NATURAL JOIN GENRE NATURAL JOIN ESTDUTHEME NATURAL JOIN THEME
+          FROM EDITEUR
           WHERE IDE = '$id'";
 
   if(!$connexion->query($sql)) echo "Pb d'accès à la BD";

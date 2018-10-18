@@ -34,7 +34,7 @@ function insertionBD() {
 
   var date = get("datesortie").value;
   if (date.length == 0) {
-    alert("Rensignez une date de sortie !");
+    alert("Renseignez une date de sortie !");
     get("datesortie").focus();
     return; }
 
@@ -66,7 +66,7 @@ function insertionBD() {
 
   var desc = get("descriptionJeu").value
   if (desc.length < 10) {
-    alert("Veuillez rensigner une description d'au moins 20 caractères !");
+    alert("Veuillez renseigner une description d'au moins 20 caractères !");
     get("descriptionJeu").focus();
     return; }
 
@@ -83,9 +83,7 @@ function insertionBD() {
   //            document.location.href = "../index.php"; },
   //          error: function(error) { alert(error); }});
 
-  window.location.replace("query.php?nom=" + nom + "&editeur=" + editeur + "&date=" + date + "&genre="+ genre + "&theme=" + theme + "&desc=" + desc);
-
-}
+  window.location.replace("queryJeu.php?nom=" + nom + "&editeur=" + editeur + "&date=" + date + "&genre="+ genre + "&theme=" + theme + "&desc=" + desc); }
 
 </script>
 

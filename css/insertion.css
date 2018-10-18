@@ -126,3 +126,7 @@ footer{
   align-items: flex-end;
   color: #FFFFFF;
 }
+
+textarea {
+  resize: none;
+}
