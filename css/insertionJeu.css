@@ -1,0 +1,38 @@
+.corps{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 1%;
+  padding: 1%;
+  background-color: #e54a4e;
+  min-height: 200%;
+  color: #FFFFFF;
+}
+
+.infos{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.left{
+  flex:1;
+  margin: auto;
+  margin-right: 5%;
+}
+
+.left p{
+  margin-bottom: 10%;
+}
+
+.right{
+  flex:1;
+}
+
+input[type=button] {
+  width: 25%;
+  margin: auto;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}

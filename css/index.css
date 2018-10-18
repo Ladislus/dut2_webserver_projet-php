@@ -62,7 +62,6 @@ header #lien {
 }
 
 header #bouton{
-  vertical-align: middle;
   margin: auto;
   margin-left: 0%;
   margin-right: 7%;
@@ -76,7 +75,7 @@ header #ajouter{
   border-radius: 25%;
   padding: 5%;
   width: 100%;
-  margin: 2%;
+  margin-top: 5%;
   background-color: #e54a4e;
   color: #FFFFFF;
   white-space: nowrap;

@@ -25,10 +25,6 @@ header{
   display: flex;
 }
 
-header a{
-  text-decoration: none;
-}
-
 header #leftside{
   align-items: flex-start;
   white-space: nowrap;
@@ -66,58 +62,23 @@ header #lien {
 }
 
 header #bouton{
-  vertical-align: middle;
   margin: auto;
   margin-left: 0%;
   margin-right: 7%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 header #ajouter{
   text-decoration: none;
   border-radius: 25%;
   padding: 5%;
+  width: 100%;
+  margin-top: 5%;
   background-color: #e54a4e;
   color: #FFFFFF;
   white-space: nowrap;
-}
-
-.corps{
-  flex:1;
-  display: flex;
-  flex-direction: column;
-  margin: 1%;
-  padding: 1%;
-  background-color: #e54a4e;
-  min-height: 200%;
-  color: #FFFFFF;
-}
-
-.infos{
-  display: flex;
-  flex-direction: row;
-  height: auto;
-}
-
-.left{
-  margin-right: 2%;
-  flex: 1;
-  height: 100%;
-}
-
-.corps img{
-  height: auto;
-  width: 100%;
-  height: 100%;
-}
-
-.right{
-  flex: 1;
-}
-
-.corps a{
-  text-decoration: none;
-  color: #FFFFFF;
-  font-style: italic;
 }
 
 footer{
