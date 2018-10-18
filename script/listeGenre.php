@@ -22,7 +22,7 @@
   $sql = "SELECT IDG, NOMGENRE FROM GENRE ORDER BY NOMGENRE ASC";
   foreach($connexion->query($sql) as $row) {
     echo "<h1>".$row['NOMGENRE']."</h1>\n";
-    echo "<div class=\"genre\">\n";
+    echo "<div class=\"objet\">\n";
     $lesJeu = "SELECT IDJ, NOMJ
                FROM JEU NATURAL JOIN ESTDUGENRE NATURAL JOIN GENRE
                WHERE IDG = ".$row['IDG'];
@@ -31,10 +31,10 @@
         else {
           foreach ($connexion->query($lesJeu) as $jeu) {
             echo "<div class=\"item\">\n";
-            echo "<div class='test'>\n";
-            echo "<img src=\"../image/jeu/".$jeu['IDJ'].".png\">\n";
-            echo "</div>\n";
-            echo "<a href='../template/jeu.php?id=".urlencode($jeu['IDJ'])."'>".$jeu['NOMJ']."</a><br/>\n";
+              echo "<div class='image'>\n";
+                echo "<img src=\"../image/jeu/".$jeu['IDJ'].".png\">\n";
+              echo "</div>\n";
+              echo "<a href='../template/jeu.php?id=".urlencode($jeu['IDJ'])."'>".$jeu['NOMJ']."</a><br/>\n";
             echo "</div><br>\n"; }}
         echo "</div>\n"; }
 
