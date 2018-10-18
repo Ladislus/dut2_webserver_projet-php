@@ -16,7 +16,7 @@
 
   $jeu = "";
   $sql = "SELECT DISTINCT IDJ, NOMJ
-          FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR
+          FROM JEU NATURAL JOIN ESTEDITE NATURAL JOIN EDITEUR
           WHERE IDE = '$id'";
 
   if (!$connexion->query($sql)->fetch()) { $jeu = "Aucun jeu n'a été ajouté à cet éditeur.\n"; }
