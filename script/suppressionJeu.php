@@ -12,7 +12,7 @@
   $id = $_GET['id'];
   var_dump($id);
 
-  $tables = ['ESTDUGENRE', 'ESTDUTHEME', 'ESTEDITER', 'JEU'];
+  $tables = ['ESTDUGENRE', 'ESTDUTHEME', 'ESTEDITE', 'JEU'];
   foreach ($tables as $value) {
     $sql = "DELETE FROM ".$value." WHERE IDJ = ".$id;
     var_dump($sql);

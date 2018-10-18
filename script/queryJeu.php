@@ -26,7 +26,7 @@
   $idJ = $connexion->query("SELECT IDJ FROM JEU WHERE NOMJ = '".$nom."'")->fetch()[0];
   $idE = $connexion->query("SELECT IDE FROM EDITEUR WHERE NOME = '".$editeur."'")->fetch()[0];
 
-  $sql = $connexion->prepare("INSERT INTO ESTEDITER (IDJ, IDE) VALUES (:idJ, :idE)");
+  $sql = $connexion->prepare("INSERT INTO ESTEDITE (IDJ, IDE) VALUES (:idJ, :idE)");
   $sql->bindParam(':idJ', $idJ);
   $sql->bindParam(':idE', $idE);
   $sql->execute();
