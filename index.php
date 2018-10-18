@@ -24,8 +24,8 @@
       </a>
       <!-- Liens -->
       <div id="liens">
-        <a id="lien" href="script/listeEditeur.php">Accéder aux éditeurs</a>
         <a id="lien" href="script/listeJeu.php">Accéder aux jeux</a>
+        <a id="lien" href="script/listeEditeur.php">Accéder aux éditeurs</a>
         <a id="lien" href="script/listeTheme.php">Accéder aux thèmes</a>
         <a id="lien" href="script/listeGenre.php">Accéder aux genres</a>
       </div>

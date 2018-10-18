@@ -3,9 +3,9 @@
   include "../template/header.php";
 
   echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/insertion.css\">";
-  echo "<title>Ajout</title>";
-  echo "</head>";
-  #include "../template/banniere.php";
+  echo "<title>Ajout d'un éditeur</title>";
+
+  include "../template/banniere.php";
 
   #Infos de connexion à la BD
   require("../BD/connect.php");
