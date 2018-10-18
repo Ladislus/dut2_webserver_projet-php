@@ -8,9 +8,11 @@
   min-height: 200%;
   color: #FFFFFF;
   align-items: center;
+  padding-bottom: 5%;
 }
 
 .objet{
+  margin-bottom: 5%;
   width: 100%;
   margin-left: 50%;
   display: flex;
@@ -20,11 +22,10 @@
 }
 
 .item{
-  margin-top: 10%;
+  margin-top: 5%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  text-align: left;
   width: 75%;
 }
 

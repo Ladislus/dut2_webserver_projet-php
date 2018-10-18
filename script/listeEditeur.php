@@ -33,7 +33,7 @@
             echo "<div class='text'>\n";
           echo "</div>";
           echo "<a href='../template/editeur.php?id=".urlencode($row['IDE'])."'>".$row['NOME']."</a><br/>\n";
-        echo "</div><br>\n"; }
+        echo "</div>\n"; }
       echo "</div>"; }}
 
   echo "</div>";

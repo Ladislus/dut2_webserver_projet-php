@@ -33,7 +33,7 @@
           echo "<div class='text'>\n";
             echo "<a href='../template/jeu.php?id=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n";
           echo "</div>";
-        echo "</div><br>\n"; }
+        echo "</div>\n"; }
       echo "</div>"; }}
 
   echo "</div>";
