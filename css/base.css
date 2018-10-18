@@ -29,7 +29,6 @@ header #leftside{
   align-items: flex-start;
   white-space: nowrap;
   margin-left: 2%;
-  text-decoration: none;
 }
 
 header a{
@@ -86,53 +85,13 @@ header #ajouter{
   white-space: nowrap;
 }
 
-.corps{
-  flex:1;
-  display: flex;
-  flex-direction: column;
-  margin: 1%;
-  padding: 1%;
-  background-color: #e54a4e;
-  min-height: 200%;
-}
-
-input[type=text] {
-  width: 25%;
-  margin: auto;
-  margin-bottom: 3%;
-  margin-top: 3%;
-}
-
-
-#resultat {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 0%;
-  background-color: #313a43;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-#resultat h1{
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 200%;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-#resultat a{
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 100%;
-  font-family: sans-serif;
-  margin-bottom: 2%;
-}
-
 footer{
   margin-left: 2%;
   margin-bottom: 1%;
   align-items: flex-end;
   color: #FFFFFF;
+}
+
+textarea {
+  resize: none;
 }
