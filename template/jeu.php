@@ -1,9 +1,18 @@
+<script src="../ressource/jquery.js"></script>
+<script>
+
+  function suppressionBD() {
+    var id = "<?php echo $_GET['id']; ?>";
+    window.location.replace("../script/suppressionJeu.php?id=" + id); }
+
+</script>
+
 <?php
 
   include 'header.php';
 
   #Infos de connexion à la BD
-  require("../BD/connect.php");
+  require_once("../BD/connect.php");
 
   #Création de la connexion
   $dsn="mysql:dbname=".BASE.";host=".SERVER;
@@ -24,14 +33,14 @@
 
   $theme = "";
   $sql = "SELECT DISTINCT NOMTHEME
-          FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR NATURAL JOIN ESTDUGENRE NATURAL JOIN GENRE NATURAL JOIN ESTDUTHEME NATURAL JOIN THEME
+          FROM JEU NATURAL JOIN ESTEDITE NATURAL JOIN EDITEUR NATURAL JOIN ESTDUGENRE NATURAL JOIN GENRE NATURAL JOIN ESTDUTHEME NATURAL JOIN THEME
           WHERE IDJ = '$id'";
   foreach ($connexion->query($sql) as $row) {
     if(empty($theme)) { $theme = $row['NOMTHEME']; }
     else { $theme = $theme.", ".$row['NOMTHEME']; }}
 
   $sql = "SELECT DISTINCT NOMJ, DATESORTIE, IDE, NOME, DESCJ
-          FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR NATURAL JOIN ESTDUGENRE NATURAL JOIN GENRE NATURAL JOIN ESTDUTHEME NATURAL JOIN THEME
+          FROM JEU NATURAL JOIN ESTEDITE NATURAL JOIN EDITEUR NATURAL JOIN ESTDUGENRE NATURAL JOIN GENRE NATURAL JOIN ESTDUTHEME NATURAL JOIN THEME
           WHERE IDJ = '$id'";
 
   if(!$connexion->query($sql)) echo "Pb d'accès à la BD";
@@ -55,6 +64,7 @@
     echo "<p>".$result['DESCJ']."</p>\n";
     echo "</div>\n";
     echo "</div>\n";
+    echo "<input type=\"button\" value=\"Supprimer\" onclick=\"suppressionBD()\">";
     echo "</div>\n";}
 
     include "footer.php";

@@ -3,7 +3,7 @@
   include 'header.php';
 
   #Infos de connexion à la BD
-  require("../BD/connect.php");
+  require_once("../BD/connect.php");
 
   #Création de la connexion
   $dsn="mysql:dbname=".BASE.";host=".SERVER;
@@ -16,13 +16,16 @@
 
   $jeu = "";
   $sql = "SELECT DISTINCT IDJ, NOMJ
-          FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR
+          FROM JEU NATURAL JOIN ESTEDITE NATURAL JOIN EDITEUR
           WHERE IDE = '$id'";
-  foreach ($connexion->query($sql) as $row) {
-    $jeu = $jeu."<a href='jeu.php?id=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n"; }
+
+  if (!$connexion->query($sql)->fetch()) { $jeu = "Aucun jeu n'a été ajouté à cet éditeur.\n"; }
+  else {
+    foreach ($connexion->query($sql) as $row) {
+      $jeu = $jeu."<a href='jeu.php?id=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n"; }}
 
   $sql = "SELECT DISTINCT NOME, SIEGESOCIETE, DATECREATION, ETAT, DESCE
-          FROM JEU NATURAL JOIN ESTEDITER NATURAL JOIN EDITEUR NATURAL JOIN ESTDUGENRE NATURAL JOIN GENRE NATURAL JOIN ESTDUTHEME NATURAL JOIN THEME
+          FROM EDITEUR
           WHERE IDE = '$id'";
 
   if(!$connexion->query($sql)) echo "Pb d'accès à la BD";
@@ -30,7 +33,6 @@
     $result = $connexion->query($sql)->fetch();
     echo "<title>".$result['NOME']."</title>";
     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/editeur.css\">";
-    echo "</head>";
     include "banniere.php";
     echo "<div class=\"corps\">\n";
     echo "<div class=\"infos\">\n";

@@ -1,7 +1,7 @@
 <?php
 
   #Infos de connexion à la BD
-  require("../BD/connect.php");
+  require_once("../BD/connect.php");
 
   #Création de la connexion
   $dsn="mysql:dbname=".BASE.";host=".SERVER;
@@ -9,8 +9,6 @@
   catch(PDOException $e){
       printf("Échec de la connexion : %s\n", $e->getMessage());
       exit(); }
-
-  var_dump($_GET);
 
   $nom = $_GET['nom'];
   $editeur = $_GET['editeur'];
@@ -28,7 +26,7 @@
   $idJ = $connexion->query("SELECT IDJ FROM JEU WHERE NOMJ = '".$nom."'")->fetch()[0];
   $idE = $connexion->query("SELECT IDE FROM EDITEUR WHERE NOME = '".$editeur."'")->fetch()[0];
 
-  $sql = $connexion->prepare("INSERT INTO ESTEDITER (IDJ, IDE) VALUES (:idJ, :idE)");
+  $sql = $connexion->prepare("INSERT INTO ESTEDITE (IDJ, IDE) VALUES (:idJ, :idE)");
   $sql->bindParam(':idJ', $idJ);
   $sql->bindParam(':idE', $idE);
   $sql->execute();

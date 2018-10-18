@@ -31,6 +31,10 @@ header #leftside{
   margin-left: 2%;
 }
 
+header a{
+  color: #313a43;
+}
+
 header img{
   vertical-align: middle;
   height: 5vw;
@@ -62,63 +66,23 @@ header #lien {
 }
 
 header #bouton{
-  vertical-align: middle;
   margin: auto;
   margin-left: 0%;
   margin-right: 7%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 header #ajouter{
   text-decoration: none;
   border-radius: 25%;
   padding: 5%;
+  width: 100%;
+  margin-top: 5%;
   background-color: #e54a4e;
   color: #FFFFFF;
   white-space: nowrap;
-}
-
-#corps{
-  flex:1;
-  display: flex;
-  flex-direction: column;
-  margin: 1%;
-  padding: 1%;
-  background-color: #e54a4e;
-  min-height: 200%;
-}
-
-input[type=text] {
-  width: 25%;
-  margin: auto;
-  margin-bottom: 3%;
-  margin-top: 3%;
-}
-
-
-#resultat {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 0%;
-  background-color: #313a43;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-#resultat h1{
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 200%;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-#resultat a{
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 100%;
-  font-family: sans-serif;
-  margin-bottom: 2%;
 }
 
 footer{
@@ -126,4 +90,8 @@ footer{
   margin-bottom: 1%;
   align-items: flex-end;
   color: #FFFFFF;
+}
+
+textarea {
+  resize: none;
 }

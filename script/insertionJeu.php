@@ -3,12 +3,12 @@
   include "../template/header.php";
 
   echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/insertion.css\">";
-  echo "<title>Ajout</title>";
-  echo "</head>";
-  #include "../template/banniere.php";
+  echo "<title>Ajout d'un jeu</title>";
+
+  include "../template/banniere.php";
 
   #Infos de connexion à la BD
-  require("../BD/connect.php");
+  require_once("../BD/connect.php");
 
   #Création de la connexion
   $dsn="mysql:dbname=".BASE.";host=".SERVER;
@@ -34,7 +34,7 @@ function insertionBD() {
 
   var date = get("datesortie").value;
   if (date.length == 0) {
-    alert("Rensignez une date de sortie !");
+    alert("Renseignez une date de sortie !");
     get("datesortie").focus();
     return; }
 
@@ -66,7 +66,7 @@ function insertionBD() {
 
   var desc = get("descriptionJeu").value
   if (desc.length < 10) {
-    alert("Veuillez rensigner une description d'au moins 20 caractères !");
+    alert("Veuillez renseigner une description d'au moins 20 caractères !");
     get("descriptionJeu").focus();
     return; }
 
@@ -83,69 +83,73 @@ function insertionBD() {
   //            document.location.href = "../index.php"; },
   //          error: function(error) { alert(error); }});
 
-  window.location.replace("query.php?nom=" + nom + "&editeur=" + editeur + "&date=" + date + "&genre="+ genre + "&theme=" + theme + "&desc=" + desc);
-
-}
+  window.location.replace("queryJeu.php?nom=" + nom + "&editeur=" + editeur + "&date=" + date + "&genre="+ genre + "&theme=" + theme + "&desc=" + desc); }
 
 </script>
+<div class="corps">
+  <div class="infos">
+    <div class="left">
+      <p>Nom du jeu:<br>
+        <input type = "text"
+               name = "nomJ"
+               required pattern=[a-z]{2,100}
+               placeholder="Ex: Mario">
+      </p>
+      <p>
+        Date de sortie:<br>
+        <input type="date" name="datesortie">
+      </p>
 
-<p>Nom du jeu:
-  <input type = "text"
-         name = "nomJ"
-         required pattern=[a-z]{2,100}
-         placeholder="Ex: Mario">
-</p>
-<p>
-  Date de sortie: <input type="date" name="datesortie">
-</p>
+      <p>Description:<br>
+        <textarea name="descriptionJeu" rows="5" cols="50" placeholder="Entrez sa description" value="">
+        </textarea>
+      </p>
+    </div>
 
-<p>Editeur du jeu:
-  <select name="editeur" size="1">
-    <option value="" disabled selected>Selectionner un éditeur</option><br>
+    <div class="right">
+      <p>Editeur du jeu:<br>
+        <select name="editeur" size="1">
+          <option value="" disabled selected>Selectionner un éditeur</option><br>
 
-<?php
+      <?php
 
-  $sql = "SELECT NOME FROM EDITEUR";
-  foreach ($connexion->query($sql) as $row) {
-      echo "<option value=\"".$row['NOME']."\">".$row['NOME']."</option><br>\n"; }
+        $sql = "SELECT NOME FROM EDITEUR";
+        foreach ($connexion->query($sql) as $row) {
+            echo "<option value=\"".$row['NOME']."\">".$row['NOME']."</option><br>\n"; }
 
-?>
+      ?>
 
-</select></p>
+      </select></p>
 
-<p>Genre(s):
-  <select multiple name="genre">
+      <p>Genre(s):<br>
+        <select multiple name="genre">
 
-<?php
+      <?php
 
-  $sql = "SELECT NOMGENRE FROM GENRE";
-  foreach ($connexion->query($sql) as $row) {
-    echo "<option value=\"".$row['NOMGENRE']."\">".$row['NOMGENRE']."</option><br>\n"; }
+        $sql = "SELECT NOMGENRE FROM GENRE";
+        foreach ($connexion->query($sql) as $row) {
+          echo "<option value=\"".$row['NOMGENRE']."\">".$row['NOMGENRE']."</option><br>\n"; }
 
-?>
-</select>
+      ?>
+      </select>
+      </p>
 
+      <p>Thème(s):<br>
+        <select multiple name="theme">
 
-<p>Thème(s):
-  <select multiple name="theme">
+      <?php
 
-<?php
+        $sql = "SELECT NOMTHEME FROM THEME";
+        foreach ($connexion->query($sql) as $row) {
+          echo "<option value=\"".$row['NOMTHEME']."\">".$row['NOMTHEME']."</option><br>\n"; }
 
-  $sql = "SELECT NOMTHEME FROM THEME";
-  foreach ($connexion->query($sql) as $row) {
-    echo "<option value=\"".$row['NOMTHEME']."\">".$row['NOMTHEME']."</option><br>\n"; }
+      ?>
 
-?>
-
-</select></p>
-
-<p>Description:
-  <textarea name="descriptionJeu" rows="5" cols="50" placeholder="Entrez sa description" value="">
-  </textarea>
-</p>
-
-<input type="button" value="Inserer" onclick="insertionBD()">
-
+      </select></p>
+    </div>
+  </div>
+  <input type="button" value="Insérer" onclick="insertionBD()">
+</div>
 <?php
 
   include "../template/footer.php";

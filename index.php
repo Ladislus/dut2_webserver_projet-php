@@ -16,7 +16,7 @@
 
     <!-- Bannière -->
     <header>
-      <a>
+      <a href="index.php">
         <div id="leftside">
           <img src="image/logo.png">
           <h1>GameLand<h1>
@@ -24,14 +24,14 @@
       </a>
       <!-- Liens -->
       <div id="liens">
-        <a id="lien" href="script/listeEditeur.php">Accéder aux éditeurs</a>
         <a id="lien" href="script/listeJeu.php">Accéder aux jeux</a>
+        <a id="lien" href="script/listeEditeur.php">Accéder aux éditeurs</a>
         <a id="lien" href="script/listeTheme.php">Accéder aux thèmes</a>
         <a id="lien" href="script/listeGenre.php">Accéder aux genres</a>
       </div>
       <div id="bouton">
-        <a id="ajouter" href="script/insertion.php">Ajouter un jeu</a>
-        <a id="ajouter" href="script/insertion.php">Ajouter un éditeur</a>
+        <a id="ajouter" href="script/insertionJeu.php">Ajouter un jeu</a>
+        <a id="ajouter" href="script/insertionEditeur.php">Ajouter un éditeur</a>
       </div>
     </header>
 
@@ -44,6 +44,24 @@
             onkeyup="reloadTitre()" >
 
       <div id="resultat">
+      </div>
+
+      <div id="latest">
+
+<?php
+
+  #Infos de connexion à la BD
+  require_once("BD/connect.php");
+
+  #Création de la connexion
+  $dsn="mysql:dbname=".BASE.";host=".SERVER;
+  try{ $connexion = new PDO($dsn, USER, PASSWD); }
+  catch(PDOException $e){
+      printf("Échec de la connexion : %s\n", $e->getMessage());
+      exit(); }
+
+?>
+
       </div>
     </div>
 
