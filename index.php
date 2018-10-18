@@ -45,7 +45,7 @@
 
       <div id="resultat">
       </div>
-      
+
       <h1>Quelques jeux:</h1><br>
       <div class="latest">
 
@@ -61,7 +61,7 @@
       printf("Échec de la connexion : %s\n", $e->getMessage());
       exit(); }
 
-  $sql = "SELECT IDJ, NOMJ FROM JEU";
+  $sql = "SELECT IDJ FROM JEU";
   $res = $connexion->query($sql)->fetchAll();
 
   $ints = [];
@@ -70,7 +70,9 @@
     if (!in_array($i, $ints)) { array_push($ints, $i); }}
   foreach ($ints as $value) {
     echo "<div class=\"last\">\n";
+    echo "<a href='template/jeu.php?id=".urlencode($res[$value]['IDJ'])."'>\n";
     echo "<img src=\"image/jeu/".$res[$value]['IDJ']."\">\n";
+    echo "</a>\n";
     echo "</div>\n"; }
 
 ?>
