@@ -130,6 +130,23 @@ input[type=text] {
   margin-bottom: 2%;
 }
 
+h1{
+  color: #FFFFFF;
+}
+
+.latest{
+  color: #FFFFFF;
+  display: flex;
+}
+
+.last{
+  margin: auto;
+}
+
+img{
+  height: 200px;
+}
+
 footer{
   margin-left: 2%;
   margin-bottom: 1%;

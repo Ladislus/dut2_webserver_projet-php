@@ -6,7 +6,11 @@ INSERT INTO JEU (NOMJ, DATESORTIE, DESCJ) VALUES
   ('Fire Emblem', '1990-01-10', 'Fire Emblem est un tactical RPG au tour par tour où vous incarnez un héros pour vaince les grands méchants agrougrou !'),
   ('Borderlands 2', '2012-12-21', 'EXPLOSIOOOON, BRUTAAAAASE, DU SAAAAANG, ET DES EXPLOSIOOOONSSSSS, et accessoirement le personnage principal le plus cool de l\'histoire du jeu vidéo: MONSIEUR TOOOOOOOOOOOORQUE et ses guns FONT DES EXPLOSIOOOONSSSSS!!! TROP COOOOOOOOOOOOOOOL'),
   ('Silent Hill', '1999-12-01','Silent Hill est un jeu vidéo de type survival horror développé par Konami CE Tokyo et édité par Konami. Réputé pour avoir révolutionné le jeu d\'horreur par son approche psychologique de la peur, le titre a connu un succès international.'),
-  ('Metal Gear Solid V', '2015-09-01', 'L\'invasion de l\'Afghanistan par l\'URSS au début des années 1980 bouleverse le cours de la guerre froide et a marqué une nouvelle ère tandis que le mercenaire légendaire compte bien faire part au monde entier de son retour alors qu\'il n\'est plus qu\'une légende tombée dans l\'oubli, tout cela dans la continuité d\'un plan à la gravité dramatique qu\'il prépare, afin de se venger de la mort de ses hommes, de ses camarades. ');
+  ('Metal Gear Solid V', '2015-09-01', 'L\'invasion de l\'Afghanistan par l\'URSS au début des années 1980 bouleverse le cours de la guerre froide et a marqué une nouvelle ère tandis que le mercenaire légendaire compte bien faire part au monde entier de son retour alors qu\'il n\'est plus qu\'une légende tombée dans l\'oubli, tout cela dans la continuité d\'un plan à la gravité dramatique qu\'il prépare, afin de se venger de la mort de ses hommes, de ses camarades. '),
+  ('Super Smash Bros Ultimate', '2018-12-07', 'Ce jeu, qui, indisponnible pour le moement est le meilleur jeu de l\'année, rien à redire là dessus (Ladessus)(Ladislus).. Bref. Jeu phare dans la communauté de l\'anneau, il est le jeu que notre groupe, à part un, que nous attendons le plus'),
+  ('Pokémon', '1996-02-27', 'La série de jeux vidéo Pokémon est un ensemble de jeux vidéo de rôle basé sur la franchise japonaise Pokémon. Elle débute le 27 février 1996 au Japon avec la sortie des jeux Pocket Monsters Vert et Rouge. Un jeu pour gamins pour certains, un jeu de bonhommes pour d\'autres.'),
+  ('Fortnite', '2017-08-21', 'Fortnite est un jeu pour gamins, il est joué par des gamins, et rapporte des milliers de dollars chaque jour, des GAMINS prennent la carte bancaire de leurs parents pour payer des skins. A éviter absolument.'),
+  ('BroForce', '2015-10-15', 'Broforce consiste à parcourir des niveaux en grande partie destructibles afin d\'atteindre un hélicoptère, le plus souvent après avoir tué un boss ou un diable habillé en homme d\'affaires. Le joueur contrôle un personnage sélectionné aléatoirement parmi ceux qui sont disponibles. ');
 
 INSERT INTO EDITEUR (NOME, SIEGESOCIETE, DATECREATION, ETAT, DESCE) VALUES
   ('Nintendo', 'Kyoto', '1883-09-23', 'OUVERT', 'Nintendo (任天堂株式会社, Nintendō kabushiki gaisha) est une entreprise multinationale
@@ -31,7 +35,10 @@ INSERT INTO EDITEUR (NOME, SIEGESOCIETE, DATECREATION, ETAT, DESCE) VALUES
                                               Kagemasa Kozuki, Yoshinobu Nakama, Hiro Matsuda, et Shokichi Ishihara. ' ),
   ('2K Games', 'Novato', '2005-04-08', 'OUVERT', '2K Games est un développeur, éditeur et distributeur mondial de jeu vidéo. L\'entreprise est une filiale de Take-Two Interactive,
                                                   qui possède également le studio Rockstar Games ainsi que deux labels d\'édition : 2K Sports, spécialisé dans les jeux de sport,
-                                                  et 2K Play, spécialisé dans le jeu grand public. ');
+                                                  et 2K Play, spécialisé dans le jeu grand public. '),
+  ('Epic Games', 'Cary', '1996-10-04', 'OUVERT', 'Epic Games est une société de jeux video, qui à notamment sorti le jeu Fortnite. Ils se font des dizaines de milliers de dollars chaque jour (cf Fortnite), et demande des aides pour financer une suite à ce jeu.'),
+  ('Devolver Digital', 'Austin', '2009-06-10', 'OUVERT', 'Cet éditeur est l\'éditeur derrière Serious Same ou d\'autres jeux les plus dégenter les uns que les autres. Plutôt invicible ces derniers temps, ils ne sortent que très peu de jeux, pour cause de finencement. Je ne peux rien dire de plus pour cet éditeur, les infos sont pas ouf guedins, et jpp de taper sur le clavier je veux rentrer chez moiiiiiii');
+
 
 INSERT INTO GENRE (NOMGENRE) VALUES ('RPG'),
                                     ('MMORPG'),
@@ -43,7 +50,8 @@ INSERT INTO GENRE (NOMGENRE) VALUES ('RPG'),
                                     ('Tour-par-tour'),
                                     ('FPS'),
                                     ('TPS'),
-                                    ('Comédie');
+                                    ('Comédie'),
+                                    ('Arcade');
 
 INSERT INTO THEME (NOMTHEME) VALUES ('Fantasy'),
                                     ('Science-Fiction'),
@@ -62,7 +70,11 @@ INSERT INTO ESTEDITE (IDJ, IDE) VALUES  (1,1),
                                         (5,1),
                                         (6,7),
                                         (7,6),
-                                        (8,6);
+                                        (8,6),
+                                        (9,1),
+                                        (10,1),
+                                        (11,8),
+                                        (12,9);
 
 
 INSERT INTO ESTDUGENRE (IDJ, IDG) VALUES (1,1),
@@ -72,7 +84,11 @@ INSERT INTO ESTDUGENRE (IDJ, IDG) VALUES (1,1),
                                          (5,1), (5,5), (5,6), (5,7), (5,8),
                                          (6,1), (6,3), (6,5), (6,9), (6,11),
                                          (7,5), (7,7), (7,10),
-                                         (8,4), (8,6), (8,10);
+                                         (8,4), (8,6), (8,10),
+                                         (9,3),
+                                         (10,1), (10,4), (10,6), (10,8),
+                                         (11,3), (10,10),
+                                         (12,3), (12,10), (12,12);
 
 INSERT INTO ESTDUTHEME (IDJ, IDT) VALUES (1,1), (1,6), (1,9),
                                          (2,1), (2,6), (2,9),
@@ -81,4 +97,8 @@ INSERT INTO ESTDUTHEME (IDJ, IDT) VALUES (1,1), (1,6), (1,9),
                                          (5,1), (5,9),
                                          (6,1), (6,2), (6,6), (6,9),
                                          (7,2), (7,7),
-                                         (8,4), (8,6), (8,9);
+                                         (8,4), (8,6), (8,9),
+                                         (9,1), (9,6), (9,9),
+                                         (10,1), (10,6),
+                                         (11,2), (11,6), (11,9),
+                                         (12,4), (12,6), (12,9);

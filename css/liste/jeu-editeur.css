@@ -18,14 +18,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
 }
 
 .item{
   margin-top: 5%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   width: 75%;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .corps img{
-  width: 5vw;
+  width: 8vw;
   height: auto;
 }
 

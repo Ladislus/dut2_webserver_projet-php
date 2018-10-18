@@ -46,7 +46,8 @@
       <div id="resultat">
       </div>
 
-      <div id="latest">
+      <h1>Quelques jeux:</h1><br>
+      <div class="latest">
 
 <?php
 
@@ -59,6 +60,20 @@
   catch(PDOException $e){
       printf("Échec de la connexion : %s\n", $e->getMessage());
       exit(); }
+
+  $sql = "SELECT IDJ FROM JEU";
+  $res = $connexion->query($sql)->fetchAll();
+
+  $ints = [];
+  while (sizeof($ints) < 3) {
+    $i = random_int(0, sizeof($res) - 1);
+    if (!in_array($i, $ints)) { array_push($ints, $i); }}
+  foreach ($ints as $value) {
+    echo "<div class=\"last\">\n";
+    echo "<a href='template/jeu.php?id=".urlencode($res[$value]['IDJ'])."'>\n";
+    echo "<img src=\"image/jeu/".$res[$value]['IDJ']."\">\n";
+    echo "</a>\n";
+    echo "</div>\n"; }
 
 ?>
 
