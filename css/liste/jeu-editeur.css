@@ -10,9 +10,11 @@
   align-items: center;
 }
 
-.infos{
+.objet{
+  width: 25%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .item{
@@ -31,5 +33,12 @@
   margin-left: 5%;
   text-decoration: none;
   font-size: 150%;
+  color: #FFFFFF;
+}
+
+.corps h1{
+  margin-top: 8%;
+  text-decoration: none;
+  font-size: 200%;
   color: #FFFFFF;
 }
