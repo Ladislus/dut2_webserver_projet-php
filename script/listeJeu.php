@@ -17,15 +17,15 @@
       printf("Échec de la connexion : %s\n", $e->getMessage());
       exit(); }
 
-  echo "<div id='content'>\n";
-
+  echo "<div class=\"corps\">\n";
+  echo "<div class=\"infos\">\n";
   $sql = "SELECT IDJ, NOMJ FROM JEU ORDER BY NOMJ ASC";
   foreach($connexion->query($sql) as $row) {
-    echo "<div id=\"jeu\">\n";
+    echo "<div class=\"item\">\n";
     echo "<img src=\"../image/jeu/".$row['IDJ'].".png\">\n";
     echo "<a href='../template/jeu.php?id=".urlencode($row['IDJ'])."'>".$row['NOMJ']."</a><br/>\n";
     echo "</div><br>\n"; }
-
+  echo "</div>";
   echo "</div>";
 
 ?>

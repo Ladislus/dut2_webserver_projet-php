@@ -32,6 +32,10 @@
   margin-right: 5%;
 }
 
+.right p{
+  margin-bottom: 10%;
+}
+
 input[type=button] {
   width: 25%;
   margin: auto;

@@ -1,0 +1,36 @@
+.corps{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 1%;
+  padding: 1%;
+  background-color: #e54a4e;
+  min-height: 200%;
+  color: #FFFFFF;
+  align-items: center;
+}
+
+.infos{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.item{
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.corps img{
+  width: 5vw;
+  height: auto;
+}
+
+.corps a{
+  margin-left: 5%;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-style: italic;
+}
