@@ -1,13 +1,12 @@
 <?php
 
   include "../template/header.php";
-  include "../template/banniere.php";
 
-  echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/insertionJeu.css\">";
+  echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/insertion.css\">";
   echo "<title>Ajout</title>";
   echo "</head>";
-  #include "../template/banniere.php";
 
+  include "../template/banniere.php";
   #Infos de connexion à la BD
   require("../BD/connect.php");
 
@@ -35,7 +34,7 @@ function insertionBD() {
 
   var date = get("datesortie").value;
   if (date.length == 0) {
-    alert("Rensignez une date de sortie !");
+    alert("Renseignez une date de sortie !");
     get("datesortie").focus();
     return; }
 
@@ -67,7 +66,7 @@ function insertionBD() {
 
   var desc = get("descriptionJeu").value
   if (desc.length < 10) {
-    alert("Veuillez rensigner une description d'au moins 20 caractères !");
+    alert("Veuillez renseigner une description d'au moins 20 caractères !");
     get("descriptionJeu").focus();
     return; }
 
@@ -84,9 +83,7 @@ function insertionBD() {
   //            document.location.href = "../index.php"; },
   //          error: function(error) { alert(error); }});
 
-  window.location.replace("query.php?nom=" + nom + "&editeur=" + editeur + "&date=" + date + "&genre="+ genre + "&theme=" + theme + "&desc=" + desc);
-
-}
+  window.location.replace("queryJeu.php?nom=" + nom + "&editeur=" + editeur + "&date=" + date + "&genre="+ genre + "&theme=" + theme + "&desc=" + desc); }
 
 </script>
 <div class="corps">

@@ -7,7 +7,6 @@
   background-color: #e54a4e;
   min-height: 200%;
   color: #FFFFFF;
-  align-items: center;
 }
 
 .infos{
@@ -17,11 +16,11 @@
 }
 
 .left{
+  margin: auto;
   margin-right: 2%;
   flex: 1;
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 input{
@@ -35,11 +34,13 @@ input{
   background-color: #313a43;
   color: #FFFFFF;
   white-space: nowrap;
+  align-self: center;
 }
 
 .corps img{
-  width: 100%;
+  width: 75%;
   height: auto;
+  margin: auto;
 }
 
 .right{

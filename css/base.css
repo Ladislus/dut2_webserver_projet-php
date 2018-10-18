@@ -31,6 +31,10 @@ header #leftside{
   margin-left: 2%;
 }
 
+header a{
+  color: #313a43;
+}
+
 header img{
   vertical-align: middle;
   height: 5vw;
@@ -86,4 +90,8 @@ footer{
   margin-bottom: 1%;
   align-items: flex-end;
   color: #FFFFFF;
+}
+
+textarea {
+  resize: none;
 }
