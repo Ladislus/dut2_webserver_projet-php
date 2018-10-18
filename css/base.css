@@ -1,3 +1,25 @@
+a{
+  opacity: 0.75;
+  transition: 0.3s;
+}
+
+a:hover{
+  opacity: 1;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  padding:0%;
+  margin:0%;
+  background-color: #313a43;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 header{
   background-color: #313a43;
   display: flex;
@@ -40,7 +62,6 @@ header #lien {
 }
 
 header #bouton{
-  vertical-align: middle;
   margin: auto;
   margin-left: 0%;
   margin-right: 7%;
@@ -54,8 +75,15 @@ header #ajouter{
   border-radius: 25%;
   padding: 5%;
   width: 100%;
-  margin: 2%;
+  margin-top: 5%;
   background-color: #e54a4e;
   color: #FFFFFF;
   white-space: nowrap;
+}
+
+footer{
+  margin-left: 2%;
+  margin-bottom: 1%;
+  align-items: flex-end;
+  color: #FFFFFF;
 }

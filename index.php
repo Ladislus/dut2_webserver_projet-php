@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Page d'accueil</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/banniere.css">
     <link rel="shortcut icon" type="image/png" href="image/vignette.png" />
 
     <script src="ressource/jquery.js"></script>
@@ -17,7 +16,7 @@
 
     <!-- Bannière -->
     <header>
-      <a>
+      <a href="index.php">
         <div id="leftside">
           <img src="image/logo.png">
           <h1>GameLand<h1>
@@ -31,8 +30,8 @@
         <a id="lien" href="script/listeGenre.php">Accéder aux genres</a>
       </div>
       <div id="bouton">
-        <a id="ajouter" href="script/insertion.php">Ajouter un jeu</a>
-        <a id="ajouter" href="script/insertion.php">Ajouter un éditeur</a>
+        <a id="ajouter" href="script/insertionJeu.php">Ajouter un jeu</a>
+        <a id="ajouter" href="script/insertionEditeur.php">Ajouter un éditeur</a>
       </div>
     </header>
 

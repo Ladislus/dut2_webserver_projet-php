@@ -1,3 +1,12 @@
+<script src="../ressource/jquery.js"></script>
+<script>
+
+  function suppression() {
+    var nom = <?php $id ?>;
+    window.location.replace("query.php?id=" + id); }
+
+</script>
+
 <?php
 
   include 'header.php';
@@ -55,6 +64,7 @@
     echo "<p>".$result['DESCJ']."</p>\n";
     echo "</div>\n";
     echo "</div>\n";
+    echo "<input type=\"button\" value=\"Supprimer\" onclick=\"suppresionBD()\">";
     echo "</div>\n";}
 
     include "footer.php";
