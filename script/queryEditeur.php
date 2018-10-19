@@ -26,6 +26,6 @@
   $sql->bindParam(':description', $desc);
   var_dump($sql->execute());
 
-  //header('Location:../index.php');
+  header('Location:../index.php');
 
 ?>
