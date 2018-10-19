@@ -27,7 +27,7 @@
                FROM JEU NATURAL JOIN ESTDUTHEME NATURAL JOIN THEME
                WHERE IDT = ".$row['IDT'];
       if (empty($connexion->query($lesJeu)->fetch())) {
-        echo "<p> Aucun jeu de ce genre</p>\n"; }
+        echo "<p> Aucun jeu de ce thème</p>\n"; }
         else {
           foreach ($connexion->query($lesJeu) as $jeu) {
             echo "<div class=\"item\">\n";
